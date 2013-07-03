@@ -1,5 +1,4 @@
 {
-    "graph": {
         "mode": "NORMAL",
         "vertices": [
             {
@@ -89,5 +88,5 @@
                 "_label": "created"
             }
         ]
-    }
+
 }

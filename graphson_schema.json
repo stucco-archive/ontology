@@ -1,13 +1,8 @@
 {
   "type":"object",
   "$schema": "http://json-schema.org/draft-03/schema",
-  "id": "gov.ornl.sava.graphson.normal",
+  "id": "gov.ornl.sava.graphson.normal/graph",
   "required":false,
-  "properties":{
-    "graph": {
-      "type":"object",
-      "id": "gov.ornl.sava.graphson.normal/graph",
-      "required":true,
       "properties":{
         "edges": {
           "type":"array",
@@ -80,6 +75,4 @@
 
         }
       }
-    }
-  }
 }

@@ -14,4 +14,10 @@ obj = json.load( codecs.open(obj_file, 'r', encoding='utf-8') )
 # If no exception is raised by validate(), the instance is valid.
 validate(obj, schema)
 
+obj_file = './extended_test_graph.json'
+obj = json.load( codecs.open(obj_file, 'r', encoding='utf-8') )
+
+# If no exception is raised by validate(), the instance is valid.
+validate(obj, schema)
+
 print 'passed!'
