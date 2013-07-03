@@ -1,0 +1,87 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "gov.ornl.sava.graphson.normal",
+  "required":false,
+  "properties":{
+    "graph": {
+      "type":"object",
+      "id": "gov.ornl.sava.graphson.normal/graph",
+      "required":true,
+      "properties":{
+        "edges": {
+          "type":"array",
+          "id": "gov.ornl.sava.graphson.normal/graph/edges",
+          "required":false,
+          "items":
+            {
+              "type":"object",
+              "id": "gov.ornl.sava.graphson.normal/graph/edges/0",
+              "required":false,
+              "properties":{
+                "_id": {
+                  "type":"string",
+                  "id": "gov.ornl.sava.graphson.normal/graph/edges/0/_id",
+                  "required":true
+                },
+                "_inV": {
+                  "type":"string",
+                  "id": "gov.ornl.sava.graphson.normal/graph/edges/0/_inV",
+                  "required":true
+                },
+                "_label": {
+                  "type":"string",
+                  "id": "gov.ornl.sava.graphson.normal/graph/edges/0/_label",
+                  "required":true
+                },
+                "_outV": {
+                  "type":"string",
+                  "id": "gov.ornl.sava.graphson.normal/graph/edges/0/_outV",
+                  "required":true
+                },
+                "_type": {
+                  "type":"string",
+                  "id": "gov.ornl.sava.graphson.normal/graph/edges/0/_type",
+                  "required":true
+                },
+                "additionalProperties": true
+              }
+            }
+          
+
+        },
+        "mode": {
+          "type":"string",
+          "id": "gov.ornl.sava.graphson.normal/graph/mode",
+          "required":true
+        },
+        "vertices": {
+          "type":"array",
+          "id": "gov.ornl.sava.graphson.normal/graph/vertices",
+          "required":false,
+          "items":
+            {
+              "type":"object",
+              "id": "gov.ornl.sava.graphson.normal/graph/vertices/0",
+              "required":false,
+              "properties":{
+                "_id": {
+                  "type":"string",
+                  "id": "gov.ornl.sava.graphson.normal/graph/vertices/0/_id",
+                  "required":true
+                },
+                "_type": {
+                  "type":"string",
+                  "id": "gov.ornl.sava.graphson.normal/graph/vertices/0/_type",
+                  "required":true
+                },
+                "additionalProperties": true
+              }
+            }
+          
+
+        }
+      }
+    }
+  }
+}
