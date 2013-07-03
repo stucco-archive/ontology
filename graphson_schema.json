@@ -43,8 +43,7 @@
                   "type":"string",
                   "id": "gov.ornl.sava.graphson.normal/graph/edges/0/_type",
                   "required":true
-                },
-                "additionalProperties": true
+                }
               }
             }
           
@@ -74,8 +73,7 @@
                   "type":"string",
                   "id": "gov.ornl.sava.graphson.normal/graph/vertices/0/_type",
                   "required":true
-                },
-                "additionalProperties": true
+                }
               }
             }
           
