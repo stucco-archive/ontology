@@ -1,0 +1,58 @@
+{
+  "description":"The top level of the graph",
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "gov.ornl.sava.stucco/graph",
+  "required":false,
+  "properties":{
+    "mode": {
+      "type": "gov.ornl.sava.graphson.normal/graph/mode"
+    },
+    "edges": {
+      "description":"The list of edges in this graph",
+      "type":"array",
+      "id": "gov.ornl.sava.stucco/graph/edges",
+      "required":false,
+      "items":[ 
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasAccount",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'user' -'has account'-> 'account'",
+          "properties":[
+            {
+              "inVType":{
+                "required":true,
+                "enum":["account"]
+              },
+              "outVType":{
+                "required":true,
+                "enum":["user"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "vertices": {
+      "description":"The list of vertices in this graph",
+      "type":"array",
+      "id": "gov.ornl.sava.stucco/graph/vertices",
+      "required":false,
+      "items":[
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/user",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "description":"user of one or more systems",
+          "properties":[{}]
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/account",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "description":"account on some specific system(s)",
+          "properties":[{}]
+        }
+      ]
+    }
+  }
+}
+
