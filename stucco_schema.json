@@ -150,9 +150,9 @@
           }
         },
         {
-          "id": "gov.ornl.sava.stucco/graph/edges/hasExpectedservice",
+          "id": "gov.ornl.sava.stucco/graph/edges/hasKnownService",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
-          "description":"'port' -'hasExpectedservice'-> 'service'",
+          "description":"'port' -'hasKnownService'-> 'service'",
           "properties":{
             "inVType":{
               "required":true,
