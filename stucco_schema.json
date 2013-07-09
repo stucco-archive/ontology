@@ -28,6 +28,276 @@
               "enum":["user"]
             }
           }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/logsInTo",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'account' -'logsInTo'-> 'host'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["host"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["account"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/runs",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'host' -'runs'-> 'software'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["software"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["host"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasVulnerability",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'software' -'hasVulnerability'-> 'vulnerability'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["vulnerability"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["software"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/usesAddress",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'host or attackerAsset' -'usesAddress'-> 'address'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["host", "attackerAsset"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasDNSName",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'address' -'hasDNSName'-> 'DNSName'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["DNSName"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["address"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasIP",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'address' -'hasIP'-> 'IP'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["IP"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["address"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasPort",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'address' -'hasPort'-> 'port'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["port"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["address"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasLocation",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'IP' -'hasLocation'-> 'location'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["location"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["IP"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasExpectedservice",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'port' -'hasExpectedservice'-> 'service'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["service"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["port"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/dstAddress",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'flow' -'dstAddress'-> 'address'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["flow"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/srcAddress",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'address' -'srcAddress'-> 'flow'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["flow"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["address"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/exploits",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'malware' -'exploits'-> 'vulnerability'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["vulnerability"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["malware"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/involvesMalware",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'attack' -'involvesMalware'-> 'malware'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["malware"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attack"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/includesFlow",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'attack' -'includesFlow'-> 'flow'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["flow"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attack"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/associatedWith",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'malware' -'associatedWith'-> 'attackerAsset'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["attackerAsset"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["malware"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/usedIn",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'attackerAsset' -'usedIn'-> 'attack'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["attack"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attackerAsset"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/performs",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'attacker' -'performs'-> 'attack'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["attack"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attacker"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/controls",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "description":"'attacker' -'controls'-> 'attackerAsset'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["attackerAsset"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attacker"]
+            }
+          }
         }
       ]
     },
