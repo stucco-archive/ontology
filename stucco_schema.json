@@ -9,6 +9,7 @@
       "type": "gov.ornl.sava.graphson.normal/graph/mode"
     },
     "edges": {
+      "title":"edges",
       "description":"The list of edges in this graph",
       "type":"array",
       "id": "gov.ornl.sava.stucco/graph/edges",
@@ -17,6 +18,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/hasAccount",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasAccount",
           "description":"'user' -'has account'-> 'account'",
           "properties":{
             "inVType":{
@@ -32,6 +34,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/logsInTo",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"logsInTo",
           "description":"'account' -'logsInTo'-> 'host'",
           "properties":{
             "inVType":{
@@ -47,6 +50,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/runs",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"runs",
           "description":"'host' -'runs'-> 'software'",
           "properties":{
             "inVType":{
@@ -62,6 +66,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/hasVulnerability",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasVulnerability",
           "description":"'software' -'hasVulnerability'-> 'vulnerability'",
           "properties":{
             "inVType":{
@@ -77,6 +82,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/usesAddress",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"usesAddress",
           "description":"'host or attackerAsset' -'usesAddress'-> 'address'",
           "properties":{
             "inVType":{
@@ -92,6 +98,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/hasDNSName",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasDNSName",
           "description":"'address' -'hasDNSName'-> 'DNSName'",
           "properties":{
             "inVType":{
@@ -107,6 +114,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/hasIP",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasIP",
           "description":"'address' -'hasIP'-> 'IP'",
           "properties":{
             "inVType":{
@@ -122,6 +130,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/hasPort",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasPort",
           "description":"'address' -'hasPort'-> 'port'",
           "properties":{
             "inVType":{
@@ -137,6 +146,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/hasLocation",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasLocation",
           "description":"'IP' -'hasLocation'-> 'location'",
           "properties":{
             "inVType":{
@@ -152,6 +162,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/hasKnownService",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasKnownService",
           "description":"'port' -'hasKnownService'-> 'service'",
           "properties":{
             "inVType":{
@@ -167,6 +178,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/dstAddress",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"dstAddress",
           "description":"'flow' -'dstAddress'-> 'address'",
           "properties":{
             "inVType":{
@@ -182,6 +194,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/srcAddress",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"srcAddress",
           "description":"'address' -'srcAddress'-> 'flow'",
           "properties":{
             "inVType":{
@@ -197,6 +210,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/exploits",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"exploits",
           "description":"'malware' -'exploits'-> 'vulnerability'",
           "properties":{
             "inVType":{
@@ -212,6 +226,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/involvesMalware",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"involvesMalware",
           "description":"'attack' -'involvesMalware'-> 'malware'",
           "properties":{
             "inVType":{
@@ -227,6 +242,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/includesFlow",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"includesFlow",
           "description":"'attack' -'includesFlow'-> 'flow'",
           "properties":{
             "inVType":{
@@ -242,6 +258,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/associatedWith",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"associatedWith",
           "description":"'malware' -'associatedWith'-> 'attackerAsset'",
           "properties":{
             "inVType":{
@@ -257,6 +274,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/usedIn",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"usedIn",
           "description":"'attackerAsset' -'usedIn'-> 'attack'",
           "properties":{
             "inVType":{
@@ -272,6 +290,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/performs",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"performs",
           "description":"'attacker' -'performs'-> 'attack'",
           "properties":{
             "inVType":{
@@ -287,6 +306,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/edges/controls",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"controls",
           "description":"'attacker' -'controls'-> 'attackerAsset'",
           "properties":{
             "inVType":{
@@ -302,6 +322,7 @@
       ]
     },
     "vertices": {
+      "title":"vertices",
       "description":"The list of vertices in this graph",
       "type":"array",
       "id": "gov.ornl.sava.stucco/graph/vertices",
@@ -310,7 +331,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/user",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"user of one or more systems",
+          "title":"user",
+          "description":"legitimate, authorized user of some system(s) \nA user owns, is assigned, and/or uses some hardware. \nA user has an associated account.",
           "properties":{
             "vertexType":{
               "required":true,
@@ -321,7 +343,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/account",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"account on some specific system(s)",
+          "title":"account",
+          "description":"account on some specific system(s), either belonging to some specific user or a system account \nAll software runs as some account. \nAll accounts are associated with a user or users (such as system accounts.)",
           "properties":{
             "vertexType":{
               "required":true,
@@ -332,7 +355,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/host",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"some host",
+          "title":"host",
+          "description":"Any entity on the network, including PCs, routers, switches, virtual machines, etc.",
           "properties":{
             "vertexType":{
               "required":true,
@@ -343,7 +367,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/software",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"any software - applications, OSes, libraries, etc.",
+          "title":"software",
+          "description":"Any software components on a system, including OSes, applications, services, and libraries.",
           "properties":{
             "vertexType":{
               "required":true,
@@ -354,7 +379,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/vulnerability",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"a known vulnerability in some software",
+          "title":"vulnerability",
+          "description":"a flaw in some software, that can cause improper, unintended operation, and can potentially be exploited as part of an attack",
           "properties":{
             "vertexType":{
               "required":true,
@@ -365,7 +391,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/address",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"any address",
+          "title":"address",
+          "description":"any address, either inside or outside of the network",
           "properties":{
             "vertexType":{
               "required":true,
@@ -376,6 +403,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/DNSName",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"DNSName",
           "description":"a DNS name (and possibly associated info - registration info, etc.)",
           "properties":{
             "vertexType":{
@@ -387,6 +415,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/IP",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"IP",
           "description":"a specific IP address",
           "properties":{
             "vertexType":{
@@ -398,6 +427,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/port",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"port",
           "description":"a specific port",
           "properties":{
             "vertexType":{
@@ -409,6 +439,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/location",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"location",
           "description":"physical / geographic location associated with some address or address range",
           "properties":{
             "vertexType":{
@@ -420,6 +451,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/service",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"service",
           "description":"expected or actual service using some port",
           "properties":{
             "vertexType":{
@@ -431,7 +463,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/malware",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"any malicious software",
+          "title":"malware",
+          "description":"any malicious software.  This can refer to either a stored binary or a running instance. \nMalware can contain code to launch an exploit. \nMalware can itself be an asset that an attacker uses in future attacks (eg. a backdoor left on a compromised system.) or can automatically launch additional attacks on behalf of the original attacker. \nMalware can be hosted by or communicate with servers controlled by the attacker. \nMalware can contain code to load other malware. \nMalware can reuse components from other malware samples.",
           "properties":{
             "vertexType":{
               "required":true,
@@ -442,6 +475,7 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/flow",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"flow",
           "description":"a flow of traffic between two addresses",
           "properties":{
             "vertexType":{
@@ -453,7 +487,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/attack",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"some specific instance of an attack",
+          "title":"attack",
+          "description":"\"a series of steps taken by an attacker to achieve an unauthorized result.\" [Howard & Longstaff, 98]",
           "properties":{
             "vertexType":{
               "required":true,
@@ -464,7 +499,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/attackerAsset",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"some host or other (non-malware) asset used by an attacker",
+          "title":"attackerAsset",
+          "description":"some host or other asset (excluding malware) used by an attacker",
           "properties":{
             "vertexType":{
               "required":true,
@@ -475,7 +511,8 @@
         {
           "id": "gov.ornl.sava.stucco/graph/vertices/attacker",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "description":"an attacker",
+          "title":"attacker",
+          "description":"a known, suspected, or potential attacker",
           "properties":{
             "vertexType":{
               "required":true,
