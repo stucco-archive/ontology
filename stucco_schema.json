@@ -385,6 +385,33 @@
             "vertexType":{
               "required":true,
               "enum":["vulnerability"]
+            },
+            "source":{
+              "required":false
+            },
+            "comments":{
+              "required":false
+            },
+            "description":{
+              "required":false
+            },
+            "phase":{
+              "required":false
+            },
+            "phaseDate":{
+              "required":false
+            },
+            "references":{
+              "required":false
+            },
+            "status":{
+              "required":false
+            },
+            "publishedDate":{
+              "required":false
+            },
+            "modifiedDate":{
+              "required":false
             }
           }
         },
