@@ -373,6 +373,42 @@
             "vertexType":{
               "required":true,
               "enum":["software"]
+            },
+            "source":{
+              "required":false
+            },
+            "description":{
+              "required":false
+            },
+            "nvdId":{
+              "required":false
+            },
+            "status":{
+              "required":false
+            },
+            "modifiedDate":{
+              "required":false
+            },
+            "part":{
+              "required":false
+            },
+            "vendor":{
+              "required":false
+            },
+            "product":{
+              "required":false
+            },
+            "version":{
+              "required":false
+            },
+            "update":{
+              "required":false
+            },
+            "edition":{
+              "required":false
+            },
+            "language":{
+              "required":false
             }
           }
         },
@@ -411,6 +447,33 @@
               "required":false
             },
             "modifiedDate":{
+              "required":false
+            },
+            "cweNumber":{
+              "required":false
+            },
+            "cvssScore":{
+              "required":false
+            },
+            "cvssDate":{
+              "required":false
+            },
+            "accessVector":{
+              "required":false
+            },
+            "accessComplexity":{
+              "required":false
+            },
+            "accessAuthentication":{
+              "required":false
+            },
+            "confidentialityImpact":{
+              "required":false
+            },
+            "integrityImpact":{
+              "required":false
+            },
+            "availabilityImpact":{
               "required":false
             }
           }
