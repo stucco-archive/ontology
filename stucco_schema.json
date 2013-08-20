@@ -144,14 +144,14 @@
           }
         },
         {
-          "id": "gov.ornl.sava.stucco/graph/edges/hasLocation",
+          "id": "gov.ornl.sava.stucco/graph/edges/inAddressRange",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
-          "title":"hasLocation",
-          "description":"'IP' -'hasLocation'-> 'location'",
+          "title":"inAddressRange",
+          "description":"'IP' -'inAddressRange'-> 'addressRange'",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["location"]
+              "enum":["addressRange"]
             },
             "outVType":{
               "required":true,
@@ -527,14 +527,35 @@
           }
         },
         {
-          "id": "gov.ornl.sava.stucco/graph/vertices/location",
+          "id": "gov.ornl.sava.stucco/graph/vertices/addressRange",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "title":"location",
-          "description":"physical / geographic location associated with some address or address range",
+          "title":"addressRange",
+          "description":"address range",
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["location"]
+              "enum":["addressRange"]
+            },
+            "source":{
+              "required":false
+            },
+            "startIP":{
+              "required":false
+            },
+            "endIP":{
+              "required":false
+            },
+            "startIPInt":{
+              "required":false
+            },
+            "endIPInt":{
+              "required":false
+            },
+            "countryCode":{
+              "required":false
+            },
+            "countryName":{
+              "required":false
             }
           }
         },
