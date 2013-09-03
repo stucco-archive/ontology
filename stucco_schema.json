@@ -624,6 +624,42 @@
             "vertexType":{
               "required":true,
               "enum":["flow"]
+            },
+            "source":{
+              "required":false
+            },
+            "keyStrokeNStroke":{
+              "required":false
+            },
+            "proto":{
+              "required":false
+            },
+            "appBytes":{
+              "required":false
+            },
+            "state":{
+              "required":false
+            },
+            "startTime":{
+              "required":false
+            },
+            "appByteRatio":{
+              "required":false
+            },
+            "dir":{
+              "required":false
+            },
+            "flags":{
+              "required":false
+            },
+            "duration":{
+              "required":false
+            },
+            "dstPkts":{
+              "required":false
+            },
+            "srcPkts":{
+              "required":false
             }
           }
         },
