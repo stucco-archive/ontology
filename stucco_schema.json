@@ -64,6 +64,22 @@
           }
         },
         {
+          "id": "gov.ornl.sava.stucco/graph/edges/runsAs",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"runsAs",
+          "description":"'software' -'runsAs'-> 'account'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["account"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["software"]
+            }
+          }
+        },
+        {
           "id": "gov.ornl.sava.stucco/graph/edges/hasVulnerability",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasVulnerability",
@@ -195,7 +211,23 @@
           "id": "gov.ornl.sava.stucco/graph/edges/srcAddress",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"srcAddress",
-          "description":"'address' -'srcAddress'-> 'flow'",
+          "description":"'flow' -'srcAddress'-> 'address'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["flow"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasFlow",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasFlow",
+          "description":"'software' -'hasFlow'-> 'flow'",
           "properties":{
             "inVType":{
               "required":true,
@@ -203,7 +235,7 @@
             },
             "outVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["software"]
             }
           }
         },
