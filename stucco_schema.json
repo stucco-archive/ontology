@@ -441,6 +441,18 @@
             },
             "language":{
               "required":false
+            },
+            "processPath":{
+              "required":false
+            },
+            "processPid":{
+              "required":false
+            },
+            "processPpid":{
+              "required":false
+            },
+            "processArgs":{
+              "required":false
             }
           }
         },
@@ -659,6 +671,12 @@
               "required":false
             },
             "srcPkts":{
+              "required":false
+            },
+            "totalPkts":{
+              "required":false
+            },
+            "totalBytes":{
               "required":false
             }
           }
