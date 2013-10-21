@@ -350,6 +350,20 @@
               "enum":["attacker"]
             }
           }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/sameAs",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"sameAs",
+          "description":"indicates that a vertex may be the same as another; should include some confidence score",
+          "properties":{
+            "inVType":{
+              "required":true
+            },
+            "outVType":{
+              "required":true
+            }
+          }
         }
       ]
     },

@@ -40,6 +40,14 @@
               "type":"string",
               "id": "gov.ornl.sava.graphson.normal/graph/edges/base/_type",
               "required":true
+            },
+            "score":{
+              "id": "gov.ornl.sava.graphson.normal/graph/edges/base/score",
+              "required":false,
+              "description":"the calculated confidence score of this edge",
+              "type":"number",
+              "minimum": 0.0 ,
+              "maximum": 1.0
             }
           }
         }
@@ -71,6 +79,14 @@
               "type":"string",
               "id": "gov.ornl.sava.graphson.normal/graph/vertices/base/_type",
               "required":true
+            },
+            "score":{
+              "id": "gov.ornl.sava.graphson.normal/graph/vertices/base/score",
+              "required":false,
+              "description":"the calculated confidence score of this node",
+              "type":"number",
+              "minimum": 0.0 ,
+              "maximum": 1.0
             }
           }
         }
