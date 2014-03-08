@@ -638,6 +638,21 @@
             "vertexType":{
               "required":true,
               "enum":["malware"]
+            },
+            "source":{
+              "required":false
+            },
+            "malwareType":{
+              "required":false
+            },
+            "discoveryDate":{
+              "required":false
+            },
+            "shortDescription":{
+              "required":false
+            },
+            "fullDescription":{
+              "required":false
             }
           }
         },
