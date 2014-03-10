@@ -545,6 +545,9 @@
             "vertexType":{
               "required":true,
               "enum":["address"]
+            },
+            "source":{
+              "required":false
             }
           }
         },
@@ -557,6 +560,24 @@
             "vertexType":{
               "required":true,
               "enum":["DNSName"]
+            },
+            "source":{
+              "required":false
+            },
+            "ns1":{
+              "required":false
+            },
+            "ns2":{
+              "required":false
+            },
+            "ns3":{
+              "required":false
+            },
+            "ns4":{
+              "required":false
+            },
+            "ns5":{
+              "required":false
             }
           }
         },
@@ -569,6 +590,9 @@
             "vertexType":{
               "required":true,
               "enum":["IP"]
+            },
+            "source":{
+              "required":false
             }
           }
         },
@@ -581,6 +605,9 @@
             "vertexType":{
               "required":true,
               "enum":["port"]
+            },
+            "source":{
+              "required":false
             }
           }
         },
@@ -614,6 +641,18 @@
             },
             "countryName":{
               "required":false
+            },
+            "netname":{
+              "required":false
+            },
+            "description":{
+              "required":false
+            },
+            "asNum":{
+              "required":false
+            },
+            "assignedBy":{
+              "required":false
             }
           }
         },
@@ -638,6 +677,12 @@
             "vertexType":{
               "required":true,
               "enum":["malware"]
+            },
+            "avName":{
+              "required":false
+            },
+            "md5":{
+              "required":false
             },
             "source":{
               "required":false
@@ -731,6 +776,15 @@
             "vertexType":{
               "required":true,
               "enum":["attackerAsset"]
+            },
+            "source":{
+              "required":false
+            },
+            "firstSeen":{
+              "required":false
+            },
+            "lastSeen":{
+              "required":false
             }
           }
         },
