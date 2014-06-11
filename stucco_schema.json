@@ -489,6 +489,12 @@
             "description":{
               "required":false
             },
+            "shortDescription":{
+              "required":false
+            },
+            "solution":{
+              "required":false
+            },
             "phase":{
               "required":false
             },
