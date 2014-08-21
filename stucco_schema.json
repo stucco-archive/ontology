@@ -687,23 +687,74 @@
             "avName":{
               "required":false
             },
-            "md5":{
-              "required":false
+            "sha1hashes":{
+              "required":false,
+              "description":"known SHA1 hashes for this malware family"
+            },
+            "md5hashes":{
+              "required":false,
+              "description":"known MD5 hashes for this malware family"
+            },
+            "platform":{
+              "required":false,
+              "description":"platform(s) effected by this malware"
+            },
+            "filesCreated":{
+              "required":false,
+              "description":"files that may be created by this malware"
+            },
+            "filesModified":{
+              "required":false,
+              "description":"files that may be modified by this malware"
+            },
+            "registryKeysCreated":{
+              "required":false,
+              "description":"registry keys that may be created by this malware"
+            },
+            "registryKeysModified":{
+              "required":false,
+              "description":"registry keys that may be modified by this malware"
             },
             "source":{
               "required":false
             },
             "malwareType":{
-              "required":false
+              "required":false,
+              "description":"descriptive malware type, eg. 'Trojan'"
             },
             "discoveryDate":{
-              "required":false
+              "required":false,
+              "description":"date when the first known sample was observed"
+            },
+            "signatureDate":{
+              "required":false,
+              "description":"date when the first known signature was created"
+            },
+            "modifiedDate":{
+              "required":false,
+              "description":"date that the most recent source document was last updated"
             },
             "shortDescription":{
               "required":false
             },
             "fullDescription":{
               "required":false
+            },
+            "prevalence":{
+              "required":false,
+              "description":"prevalence of this malware 'in the wild' (currently a descriptive phrase, may convert these to a numeric range later)"
+            },
+            "aliases":{
+              "required":false,
+              "description":"other known names for this malware family (typically from different AV vendors)"
+            },
+            "knownFileTypes":{
+              "required":false,
+              "description":"known file types associated with this file (eg file extensions, mime types, etc.)"
+            },
+            "processesCreated":{
+              "required":false,
+              "description":"description of processes created by this malware (eg. executable name with args)"
             }
           }
         },
