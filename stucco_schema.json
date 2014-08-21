@@ -720,7 +720,7 @@
             },
             "malwareType":{
               "required":false,
-              "description":"descriptive malware type, eg. 'Trojan'"
+              "description":"descriptive malware type(s), eg. 'Trojan' or 'spyware'"
             },
             "discoveryDate":{
               "required":false,
@@ -734,15 +734,29 @@
               "required":false,
               "description":"date that the most recent source document was last updated"
             },
-            "shortDescription":{
-              "required":false
+            "overview":{
+              "required":false,
+              "description":"descriptive summary of this malware family"
             },
-            "fullDescription":{
-              "required":false
+            "details":{
+              "required":false,
+              "description":"additional text description of this malware"
+            },
+            "behavior":{
+              "required":false,
+              "description":"description of this malware's observed behaviour"
+            },
+            "removal":{
+              "required":false,
+              "description":"description of removal procedure"
             },
             "prevalence":{
               "required":false,
               "description":"prevalence of this malware 'in the wild' (currently a descriptive phrase, may convert these to a numeric range later)"
+            },
+            "distribution":{
+              "required":false,
+              "description":"known distribution methods for this malware"
             },
             "aliases":{
               "required":false,
