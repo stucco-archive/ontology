@@ -124,6 +124,11 @@
             "outVType":{
               "required":true,
               "enum":["address"]
+            },
+            "reverse":{
+              "required":false,
+              "type": "boolean",
+              "description":"flag for reverse lookups.  Assume False by default."
             }
           }
         },
