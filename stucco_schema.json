@@ -99,7 +99,7 @@
           "id": "gov.ornl.sava.stucco/graph/edges/usesAddress",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"usesAddress",
-          "description":"'host or attackerAsset' -'usesAddress'-> 'address'",
+          "description":"'host or attacker' -'usesAddress'-> 'address'",
           "properties":{
             "inVType":{
               "required":true,
@@ -107,7 +107,7 @@
             },
             "outVType":{
               "required":true,
-              "enum":["host", "attackerAsset"]
+              "enum":["host", "attacker"]
             }
           }
         },
@@ -288,14 +288,14 @@
           }
         },
         {
-          "id": "gov.ornl.sava.stucco/graph/edges/associatedWith",
+          "id": "gov.ornl.sava.stucco/graph/edges/communicatesWith",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
-          "title":"associatedWith",
-          "description":"'malware' -'associatedWith'-> 'attackerAsset'",
+          "title":"communicatesWith",
+          "description":"'malware' -'communicatesWith'-> 'address'",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["attackerAsset"]
+              "enum":["address"]
             },
             "outVType":{
               "required":true,
@@ -304,26 +304,10 @@
           }
         },
         {
-          "id": "gov.ornl.sava.stucco/graph/edges/usedIn",
+          "id": "gov.ornl.sava.stucco/graph/edges/causes",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
-          "title":"usedIn",
-          "description":"'attackerAsset' -'usedIn'-> 'attack'",
-          "properties":{
-            "inVType":{
-              "required":true,
-              "enum":["attack"]
-            },
-            "outVType":{
-              "required":true,
-              "enum":["attackerAsset"]
-            }
-          }
-        },
-        {
-          "id": "gov.ornl.sava.stucco/graph/edges/performs",
-          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
-          "title":"performs",
-          "description":"'attacker' -'performs'-> 'attack'",
+          "title":"causes",
+          "description":"'attacker' -'causes'-> 'attack'",
           "properties":{
             "inVType":{
               "required":true,
@@ -336,18 +320,18 @@
           }
         },
         {
-          "id": "gov.ornl.sava.stucco/graph/edges/controls",
+          "id": "gov.ornl.sava.stucco/graph/edges/usesMalware",
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
-          "title":"controls",
-          "description":"'attacker' -'controls'-> 'attackerAsset'",
+          "title":"usesMalware",
+          "description":"'attacker' -'usesMalware'-> 'malware'",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["attackerAsset"]
+              "enum":["attacker"]
             },
             "outVType":{
               "required":true,
-              "enum":["attacker"]
+              "enum":["malware"]
             }
           }
         },
@@ -830,32 +814,11 @@
           "id": "gov.ornl.sava.stucco/graph/vertices/attack",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
           "title":"attack",
-          "description":"\"a series of steps taken by an attacker to achieve an unauthorized result.\" [Howard & Longstaff, 98]",
+          "description":"a machine-generated alert of potentially malicious activity, such as from an IDS.",
           "properties":{
             "vertexType":{
               "required":true,
               "enum":["attack"]
-            }
-          }
-        },
-        {
-          "id": "gov.ornl.sava.stucco/graph/vertices/attackerAsset",
-          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
-          "title":"attackerAsset",
-          "description":"some host or other asset (excluding malware) used by an attacker",
-          "properties":{
-            "vertexType":{
-              "required":true,
-              "enum":["attackerAsset"]
-            },
-            "source":{
-              "required":false
-            },
-            "firstSeen":{
-              "required":false
-            },
-            "lastSeen":{
-              "required":false
             }
           }
         },
@@ -875,4 +838,3 @@
     }
   }
 }
-
