@@ -758,6 +758,10 @@
             "processesCreated":{
               "required":false,
               "description":"description of processes created by this malware (eg. executable name with args)"
+            },
+            "urlsUsed":{
+              "required":false,
+              "description":"URLs requested by this malware, or URLs distributing this malware, or othewise associated with this malware."
             }
           }
         },
