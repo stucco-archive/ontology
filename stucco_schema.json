@@ -410,52 +410,68 @@
               "enum":["software"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             },
             "description":{
-              "required":false
+              "required":false,
+              "description":"description"
             },
             "nvdId":{
-              "required":false
+              "required":false,
+              "description":"NVD ID"
             },
             "status":{
-              "required":false
+              "required":false,
+              "description":"status"
             },
             "modifiedDate":{
-              "required":false
+              "required":false,
+              "description":"modified date"
             },
             "part":{
-              "required":false
+              "required":false,
+              "description":"part type"
             },
             "vendor":{
-              "required":false
+              "required":false,
+              "description":"vendor"
             },
             "product":{
-              "required":false
+              "required":false,
+              "description":"product name"
             },
             "version":{
-              "required":false
+              "required":false,
+              "description":"version"
             },
             "update":{
-              "required":false
+              "required":false,
+              "description":"update"
             },
             "edition":{
-              "required":false
+              "required":false,
+              "description":"edition"
             },
             "language":{
-              "required":false
+              "required":false,
+              "description":"language"
             },
             "processPath":{
-              "required":false
+              "required":false,
+              "description":"Process Path"
             },
             "processPid":{
-              "required":false
+              "required":false,
+              "description":"Process PID"
             },
             "processPpid":{
-              "required":false
+              "required":false,
+              "description":"Process PPID"
             },
             "processArgs":{
-              "required":false
+              "required":false,
+              "description":"Process Args"
             }
           }
         },
@@ -470,64 +486,84 @@
               "enum":["vulnerability"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             },
             "comments":{
-              "required":false
+              "required":false,
+              "description":"comments"
             },
             "description":{
-              "required":false
+              "required":false,
+              "description":"description"
             },
             "shortDescription":{
-              "required":false
+              "required":false,
+              "description":"short description"
             },
             "solution":{
-              "required":false
+              "required":false,
+              "description":"solution"
             },
             "phase":{
-              "required":false
+              "required":false,
+              "description":"phase"
             },
             "phaseDate":{
-              "required":false
+              "required":false,
+              "description":"phase date"
             },
             "references":{
-              "required":false
+              "required":false,
+              "description":"references"
             },
             "status":{
-              "required":false
+              "required":false,
+              "description":"status"
             },
             "publishedDate":{
-              "required":false
+              "required":false,
+              "description":"published date"
             },
             "modifiedDate":{
-              "required":false
+              "required":false,
+              "description":"modified date"
             },
             "cweNumber":{
-              "required":false
+              "required":false,
+              "description":"CWE Number"
             },
             "cvssScore":{
-              "required":false
+              "required":false,
+              "description":"CVSS score"
             },
             "cvssDate":{
-              "required":false
+              "required":false,
+              "description":"CVSS date"
             },
             "accessVector":{
-              "required":false
+              "required":false,
+              "description":"access vector"
             },
             "accessComplexity":{
-              "required":false
+              "required":false,
+              "description":"access complexity"
             },
             "accessAuthentication":{
-              "required":false
+              "required":false,
+              "description":"access authentication required"
             },
             "confidentialityImpact":{
-              "required":false
+              "required":false,
+              "description":"confidentiality impact"
             },
             "integrityImpact":{
-              "required":false
+              "required":false,
+              "description":"integrity impact"
             },
             "availabilityImpact":{
-              "required":false
+              "required":false,
+              "description":"availability impact"
             }
           }
         },
@@ -542,7 +578,8 @@
               "enum":["address"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             }
           }
         },
@@ -557,22 +594,28 @@
               "enum":["DNSName"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             },
             "ns1":{
-              "required":false
+              "required":false,
+              "description":"name server (1)"
             },
             "ns2":{
-              "required":false
+              "required":false,
+              "description":"name server (2)"
             },
             "ns3":{
-              "required":false
+              "required":false,
+              "description":"name server (3)"
             },
             "ns4":{
-              "required":false
+              "required":false,
+              "description":"name server (4)"
             },
             "ns5":{
-              "required":false
+              "required":false,
+              "description":"name server (5)"
             }
           }
         },
@@ -587,7 +630,8 @@
               "enum":["IP"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             }
           }
         },
@@ -602,7 +646,8 @@
               "enum":["port"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             }
           }
         },
@@ -617,37 +662,48 @@
               "enum":["addressRange"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             },
             "startIP":{
-              "required":false
+              "required":false,
+              "description":"start IP"
             },
             "endIP":{
-              "required":false
+              "required":false,
+              "description":"end IP"
             },
             "startIPInt":{
-              "required":false
+              "required":false,
+              "description":"start IP, as integer"
             },
             "endIPInt":{
-              "required":false
+              "required":false,
+              "description":"end IP, as integer"
             },
             "countryCode":{
-              "required":false
+              "required":false,
+              "description":"Country Code"
             },
             "countryName":{
-              "required":false
+              "required":false,
+              "description":"Country Name"
             },
             "netname":{
-              "required":false
+              "required":false,
+              "description":"network name"
             },
             "description":{
-              "required":false
+              "required":false,
+              "description":"description"
             },
             "asNum":{
-              "required":false
+              "required":false,
+              "description":"AS Number"
             },
             "assignedBy":{
-              "required":false
+              "required":false,
+              "description":"assigned by"
             }
           }
         },
@@ -673,8 +729,13 @@
               "required":true,
               "enum":["malware"]
             },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
             "avName":{
-              "required":false
+              "required":false,
+              "description":"AV vendor's name for this malware"
             },
             "sha1hashes":{
               "required":false,
@@ -703,9 +764,6 @@
             "registryKeysModified":{
               "required":false,
               "description":"registry keys that may be modified by this malware"
-            },
-            "source":{
-              "required":false
             },
             "malwareType":{
               "required":false,
@@ -776,46 +834,60 @@
               "enum":["flow"]
             },
             "source":{
-              "required":false
+              "required":false,
+              "description":"Data source for this vertex"
             },
             "keyStrokeNStroke":{
-              "required":false
+              "required":false,
+              "description":"detected SSH keystroke count"
             },
             "proto":{
-              "required":false
+              "required":false,
+              "description":"transaction protocol"
             },
             "appBytes":{
-              "required":false
+              "required":false,
+              "description":"total application bytes"
             },
             "state":{
-              "required":false
+              "required":false,
+              "description":"transaction state"
             },
             "startTime":{
-              "required":false
+              "required":false,
+              "description":"record start time"
             },
             "appByteRatio":{
-              "required":false
+              "required":false,
+              "description":"ratio between source appbytes and dest appbytes"
             },
             "dir":{
-              "required":false
+              "required":false,
+              "description":"direction of transaction"
             },
             "flags":{
-              "required":false
+              "required":false,
+              "description":"flow state flags seen in transaction"
             },
             "duration":{
-              "required":false
+              "required":false,
+              "description":"duration of a flow"
             },
             "dstPkts":{
-              "required":false
+              "required":false,
+              "description":"dst -> src packet count."
             },
             "srcPkts":{
-              "required":false
+              "required":false,
+              "description":"src -> dst packet count."
             },
             "totalPkts":{
-              "required":false
+              "required":false,
+              "description":"total transaction packet count"
             },
             "totalBytes":{
-              "required":false
+              "required":false,
+              "description":"total transaction bytes"
             }
           }
         },
