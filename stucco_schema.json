@@ -372,7 +372,11 @@
             "vertexType":{
               "required":true,
               "enum":["user"]
-            }
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
           }
         },
         {
@@ -384,7 +388,11 @@
             "vertexType":{
               "required":true,
               "enum":["account"]
-            }
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
           }
         },
         {
@@ -396,7 +404,11 @@
             "vertexType":{
               "required":true,
               "enum":["host"]
-            }
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
           }
         },
         {
@@ -716,7 +728,11 @@
             "vertexType":{
               "required":true,
               "enum":["service"]
-            }
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
           }
         },
         {
@@ -900,7 +916,11 @@
             "vertexType":{
               "required":true,
               "enum":["attack"]
-            }
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
           }
         },
         {
@@ -912,7 +932,11 @@
             "vertexType":{
               "required":true,
               "enum":["attacker"]
-            }
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
           }
         }
       ]
