@@ -1,0 +1,945 @@
+{
+  "description":"The top level of the graph",
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "gov.ornl.sava.stucco/graph",
+  "required":false,
+  "properties":{
+    "mode": {
+      "type": "gov.ornl.sava.graphson.normal/graph/mode"
+    },
+    "edges": {
+      "title":"edges",
+      "description":"The list of edges in this graph",
+      "type":"array",
+      "id": "gov.ornl.sava.stucco/graph/edges",
+      "required":false,
+      "items":[ 
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasAccount",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasAccount",
+          "description":"'user' -'has account'-> 'account'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["account"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["user"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/logsInTo",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"logsInTo",
+          "description":"'account' -'logsInTo'-> 'host'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["host"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["account"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/runs",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"runs",
+          "description":"'host' -'runs'-> 'software'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["software"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["host"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/runsAs",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"runsAs",
+          "description":"'software' -'runsAs'-> 'account'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["account"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["software"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasVulnerability",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasVulnerability",
+          "description":"'software' -'hasVulnerability'-> 'vulnerability'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["vulnerability"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["software"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/usesAddress",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"usesAddress",
+          "description":"'host or attacker' -'usesAddress'-> 'address'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["host", "attacker"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasDNSName",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasDNSName",
+          "description":"'address' -'hasDNSName'-> 'DNSName'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["DNSName"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "reverse":{
+              "required":false,
+              "type": "boolean",
+              "description":"flag for reverse lookups.  Assume False by default."
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasIP",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasIP",
+          "description":"'address' -'hasIP'-> 'IP'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["IP"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["address"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasPort",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasPort",
+          "description":"'address' -'hasPort'-> 'port'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["port"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["address"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/inAddressRange",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"inAddressRange",
+          "description":"'IP' -'inAddressRange'-> 'addressRange'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["addressRange"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["IP"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasKnownService",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasKnownService",
+          "description":"'port' -'hasKnownService'-> 'service'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["service"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["port"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/dstAddress",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"dstAddress",
+          "description":"'flow' -'dstAddress'-> 'address'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["flow"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/srcAddress",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"srcAddress",
+          "description":"'flow' -'srcAddress'-> 'address'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["flow"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/hasFlow",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"hasFlow",
+          "description":"'software' -'hasFlow'-> 'flow'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["flow"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["software"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/exploits",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"exploits",
+          "description":"'malware' -'exploits'-> 'vulnerability'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["vulnerability"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["malware"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/involvesMalware",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"involvesMalware",
+          "description":"'attack' -'involvesMalware'-> 'malware'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["malware"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attack"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/includesFlow",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"includesFlow",
+          "description":"'attack' -'includesFlow'-> 'flow'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["flow"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attack"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/communicatesWith",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"communicatesWith",
+          "description":"'malware' -'communicatesWith'-> 'address'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["malware"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/causes",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"causes",
+          "description":"'attacker' -'causes'-> 'attack'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["attack"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["attacker"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/usesMalware",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"usesMalware",
+          "description":"'attacker' -'usesMalware'-> 'malware'",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["attacker"]
+            },
+            "outVType":{
+              "required":true,
+              "enum":["malware"]
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/sameAs",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"sameAs",
+          "description":"indicates that a vertex may be the same as another; should include some confidence score",
+          "properties":{
+            "inVType":{
+              "required":true
+            },
+            "outVType":{
+              "required":true
+            }
+          }
+        }
+      ]
+    },
+    "vertices": {
+      "title":"vertices",
+      "description":"The list of vertices in this graph",
+      "type":"array",
+      "id": "gov.ornl.sava.stucco/graph/vertices",
+      "required":false,
+      "items":[
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/user",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"user",
+          "description":"legitimate, authorized user of some system(s) \nA user owns, is assigned, and/or uses some hardware. \nA user has an associated account.",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["user"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/account",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"account",
+          "description":"account on some specific system(s), either belonging to some specific user or a system account \nAll software runs as some account. \nAll accounts are associated with a user or users (such as system accounts.)",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["account"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/host",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"host",
+          "description":"Any entity on the network, including PCs, routers, switches, virtual machines, etc.",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["host"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/software",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"software",
+          "description":"Any software components on a system, including OSes, applications, services, and libraries.",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["software"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
+            "description":{
+              "required":false,
+              "description":"description"
+            },
+            "nvdId":{
+              "required":false,
+              "description":"NVD ID"
+            },
+            "status":{
+              "required":false,
+              "description":"status"
+            },
+            "modifiedDate":{
+              "required":false,
+              "description":"modified date"
+            },
+            "part":{
+              "required":false,
+              "description":"part type"
+            },
+            "vendor":{
+              "required":false,
+              "description":"vendor"
+            },
+            "product":{
+              "required":false,
+              "description":"product name"
+            },
+            "version":{
+              "required":false,
+              "description":"version"
+            },
+            "update":{
+              "required":false,
+              "description":"update"
+            },
+            "edition":{
+              "required":false,
+              "description":"edition"
+            },
+            "language":{
+              "required":false,
+              "description":"language"
+            },
+            "processPath":{
+              "required":false,
+              "description":"Process Path"
+            },
+            "processPid":{
+              "required":false,
+              "description":"Process PID"
+            },
+            "processPpid":{
+              "required":false,
+              "description":"Process PPID"
+            },
+            "processArgs":{
+              "required":false,
+              "description":"Process Args"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/vulnerability",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"vulnerability",
+          "description":"a flaw in some software, that can cause improper, unintended operation, and can potentially be exploited as part of an attack",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["vulnerability"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
+            "comments":{
+              "required":false,
+              "description":"comments"
+            },
+            "description":{
+              "required":false,
+              "description":"description"
+            },
+            "shortDescription":{
+              "required":false,
+              "description":"short description"
+            },
+            "solution":{
+              "required":false,
+              "description":"solution"
+            },
+            "phase":{
+              "required":false,
+              "description":"phase"
+            },
+            "phaseDate":{
+              "required":false,
+              "description":"phase date"
+            },
+            "references":{
+              "required":false,
+              "description":"references"
+            },
+            "status":{
+              "required":false,
+              "description":"status"
+            },
+            "publishedDate":{
+              "required":false,
+              "description":"published date"
+            },
+            "modifiedDate":{
+              "required":false,
+              "description":"modified date"
+            },
+            "cweNumber":{
+              "required":false,
+              "description":"CWE Number"
+            },
+            "cvssScore":{
+              "required":false,
+              "description":"CVSS score"
+            },
+            "cvssDate":{
+              "required":false,
+              "description":"CVSS date"
+            },
+            "accessVector":{
+              "required":false,
+              "description":"access vector"
+            },
+            "accessComplexity":{
+              "required":false,
+              "description":"access complexity"
+            },
+            "accessAuthentication":{
+              "required":false,
+              "description":"access authentication required"
+            },
+            "confidentialityImpact":{
+              "required":false,
+              "description":"confidentiality impact"
+            },
+            "integrityImpact":{
+              "required":false,
+              "description":"integrity impact"
+            },
+            "availabilityImpact":{
+              "required":false,
+              "description":"availability impact"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/address",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"address",
+          "description":"any address, either inside or outside of the network",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["address"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/DNSName",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"DNSName",
+          "description":"a DNS name (and possibly associated info - registration info, etc.)",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["DNSName"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
+            "ns1":{
+              "required":false,
+              "description":"name server (1)"
+            },
+            "ns2":{
+              "required":false,
+              "description":"name server (2)"
+            },
+            "ns3":{
+              "required":false,
+              "description":"name server (3)"
+            },
+            "ns4":{
+              "required":false,
+              "description":"name server (4)"
+            },
+            "ns5":{
+              "required":false,
+              "description":"name server (5)"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/IP",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"IP",
+          "description":"a specific IP address",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["IP"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/port",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"port",
+          "description":"a specific port",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["port"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/addressRange",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"addressRange",
+          "description":"address range",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["addressRange"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
+            "startIP":{
+              "required":false,
+              "description":"start IP"
+            },
+            "endIP":{
+              "required":false,
+              "description":"end IP"
+            },
+            "startIPInt":{
+              "required":false,
+              "description":"start IP, as integer"
+            },
+            "endIPInt":{
+              "required":false,
+              "description":"end IP, as integer"
+            },
+            "countryCode":{
+              "required":false,
+              "description":"Country Code"
+            },
+            "countryName":{
+              "required":false,
+              "description":"Country Name"
+            },
+            "netname":{
+              "required":false,
+              "description":"network name"
+            },
+            "description":{
+              "required":false,
+              "description":"description"
+            },
+            "asNum":{
+              "required":false,
+              "description":"AS Number"
+            },
+            "assignedBy":{
+              "required":false,
+              "description":"assigned by"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/service",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"service",
+          "description":"expected or actual service using some port",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["service"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/malware",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"malware",
+          "description":"any malicious software.  This can refer to either a stored binary or a running instance. \nMalware can contain code to launch an exploit. \nMalware can itself be an asset that an attacker uses in future attacks (eg. a backdoor left on a compromised system.) or can automatically launch additional attacks on behalf of the original attacker. \nMalware can be hosted by or communicate with servers controlled by the attacker. \nMalware can contain code to load other malware. \nMalware can reuse components from other malware samples.",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["malware"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
+            "avName":{
+              "required":false,
+              "description":"AV vendor's name for this malware"
+            },
+            "sha1hashes":{
+              "required":false,
+              "description":"known SHA1 hashes for this malware family"
+            },
+            "md5hashes":{
+              "required":false,
+              "description":"known MD5 hashes for this malware family"
+            },
+            "platform":{
+              "required":false,
+              "description":"platform(s) effected by this malware"
+            },
+            "filesCreated":{
+              "required":false,
+              "description":"files that may be created by this malware"
+            },
+            "filesModified":{
+              "required":false,
+              "description":"files that may be modified by this malware"
+            },
+            "registryKeysCreated":{
+              "required":false,
+              "description":"registry keys that may be created by this malware"
+            },
+            "registryKeysModified":{
+              "required":false,
+              "description":"registry keys that may be modified by this malware"
+            },
+            "malwareType":{
+              "required":false,
+              "description":"descriptive malware type(s), eg. 'Trojan' or 'spyware'"
+            },
+            "discoveryDate":{
+              "required":false,
+              "description":"date when the first known sample was observed"
+            },
+            "signatureDate":{
+              "required":false,
+              "description":"date when the first known signature was created"
+            },
+            "modifiedDate":{
+              "required":false,
+              "description":"date that the most recent source document was last updated"
+            },
+            "overview":{
+              "required":false,
+              "description":"descriptive summary of this malware family"
+            },
+            "details":{
+              "required":false,
+              "description":"additional text description of this malware"
+            },
+            "behavior":{
+              "required":false,
+              "description":"description of this malware's observed behaviour"
+            },
+            "removal":{
+              "required":false,
+              "description":"description of removal procedure"
+            },
+            "prevalence":{
+              "required":false,
+              "description":"prevalence of this malware 'in the wild' (currently a descriptive phrase, may convert these to a numeric range later)"
+            },
+            "distribution":{
+              "required":false,
+              "description":"known distribution methods for this malware"
+            },
+            "aliases":{
+              "required":false,
+              "description":"other known names for this malware family (typically from different AV vendors)"
+            },
+            "knownFileTypes":{
+              "required":false,
+              "description":"known file types associated with this file (eg file extensions, mime types, etc.)"
+            },
+            "processesCreated":{
+              "required":false,
+              "description":"description of processes created by this malware (eg. executable name with args)"
+            },
+            "urlsUsed":{
+              "required":false,
+              "description":"URLs requested by this malware, or URLs distributing this malware, or othewise associated with this malware."
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/flow",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"flow",
+          "description":"a flow of traffic between two addresses",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["flow"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            },
+            "keyStrokeNStroke":{
+              "required":false,
+              "description":"detected SSH keystroke count"
+            },
+            "proto":{
+              "required":false,
+              "description":"transaction protocol"
+            },
+            "appBytes":{
+              "required":false,
+              "description":"total application bytes"
+            },
+            "state":{
+              "required":false,
+              "description":"transaction state"
+            },
+            "startTime":{
+              "required":false,
+              "description":"record start time"
+            },
+            "appByteRatio":{
+              "required":false,
+              "description":"ratio between source appbytes and dest appbytes"
+            },
+            "dir":{
+              "required":false,
+              "description":"direction of transaction"
+            },
+            "flags":{
+              "required":false,
+              "description":"flow state flags seen in transaction"
+            },
+            "duration":{
+              "required":false,
+              "description":"duration of a flow"
+            },
+            "dstPkts":{
+              "required":false,
+              "description":"dst -> src packet count."
+            },
+            "srcPkts":{
+              "required":false,
+              "description":"src -> dst packet count."
+            },
+            "totalPkts":{
+              "required":false,
+              "description":"total transaction packet count"
+            },
+            "totalBytes":{
+              "required":false,
+              "description":"total transaction bytes"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/attack",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"attack",
+          "description":"a machine-generated alert of potentially malicious activity, such as from an IDS.",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["attack"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/vertices/attacker",
+          "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
+          "title":"attacker",
+          "description":"a known, suspected, or potential attacker",
+          "properties":{
+            "vertexType":{
+              "required":true,
+              "enum":["attacker"]
+            },
+            "source":{
+              "required":false,
+              "description":"Data source for this vertex"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
