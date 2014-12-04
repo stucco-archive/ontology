@@ -20,14 +20,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasAccount",
           "description":"'user' -'has account'-> 'account'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["account"]
+              "enum":["account"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["user"]
+              "enum":["user"],
+              "type":"string"
             }
           }
         },
@@ -36,14 +39,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"logsInTo",
           "description":"'account' -'logsInTo'-> 'host'",
+          "multiplicity":"multi",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["host"]
+              "enum":["host"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["account"]
+              "enum":["account"],
+              "type":"string"
             }
           }
         },
@@ -52,14 +58,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"runs",
           "description":"'host' -'runs'-> 'software'",
+          "multiplicity":"multi",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["software"]
+              "enum":["software"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["host"]
+              "enum":["host"],
+              "type":"string"
             }
           }
         },
@@ -68,14 +77,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"runsAs",
           "description":"'software' -'runsAs'-> 'account'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["account"]
+              "enum":["account"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["software"]
+              "enum":["software"],
+              "type":"string"
             }
           }
         },
@@ -84,14 +96,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasVulnerability",
           "description":"'software' -'hasVulnerability'-> 'vulnerability'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["vulnerability"]
+              "enum":["vulnerability"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["software"]
+              "enum":["software"],
+              "type":"string"
             }
           }
         },
@@ -100,14 +115,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"usesAddress",
           "description":"'host or attacker' -'usesAddress'-> 'address'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["host", "attacker"]
+              "enum":["host", "attacker"],
+              "type":"string"
             }
           }
         },
@@ -116,19 +134,23 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasDNSName",
           "description":"'address' -'hasDNSName'-> 'DNSName'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["DNSName"]
+              "enum":["DNSName"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string"
             },
             "reverse":{
               "required":false,
               "type": "boolean",
-              "description":"flag for reverse lookups.  Assume False by default."
+              "description":"flag for reverse lookups.  Assume False by default.",
+              "type":"boolean"
             }
           }
         },
@@ -137,14 +159,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasIP",
           "description":"'address' -'hasIP'-> 'IP'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["IP"]
+              "enum":["IP"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string"
             }
           }
         },
@@ -153,14 +178,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasPort",
           "description":"'address' -'hasPort'-> 'port'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["port"]
+              "enum":["port"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string"
             }
           }
         },
@@ -169,14 +197,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"inAddressRange",
           "description":"'IP' -'inAddressRange'-> 'addressRange'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["addressRange"]
+              "enum":["addressRange"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["IP"]
+              "enum":["IP"],
+              "type":"string"
             }
           }
         },
@@ -185,14 +216,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasKnownService",
           "description":"'port' -'hasKnownService'-> 'service'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["service"]
+              "enum":["service"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["port"]
+              "enum":["port"],
+              "type":"string"
             }
           }
         },
@@ -201,14 +235,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"dstAddress",
           "description":"'flow' -'dstAddress'-> 'address'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["flow"]
+              "enum":["flow"],
+              "type":"string"
             }
           }
         },
@@ -217,14 +254,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"srcAddress",
           "description":"'flow' -'srcAddress'-> 'address'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["flow"]
+              "enum":["flow"],
+              "type":"string"
             }
           }
         },
@@ -233,14 +273,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"hasFlow",
           "description":"'software' -'hasFlow'-> 'flow'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["flow"]
+              "enum":["flow"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["software"]
+              "enum":["software"],
+              "type":"string"
             }
           }
         },
@@ -249,14 +292,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"exploits",
           "description":"'malware' -'exploits'-> 'vulnerability'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["vulnerability"]
+              "enum":["vulnerability"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["malware"]
+              "enum":["malware"],
+              "type":"string"
             }
           }
         },
@@ -265,14 +311,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"involvesMalware",
           "description":"'attack' -'involvesMalware'-> 'malware'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["malware"]
+              "enum":["malware"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["attack"]
+              "enum":["attack"],
+              "type":"string"
             }
           }
         },
@@ -281,14 +330,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"includesFlow",
           "description":"'attack' -'includesFlow'-> 'flow'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["flow"]
+              "enum":["flow"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["attack"]
+              "enum":["attack"],
+              "type":"string"
             }
           }
         },
@@ -297,14 +349,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"communicatesWith",
           "description":"'malware' -'communicatesWith'-> 'address'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["malware"]
+              "enum":["malware"],
+              "type":"string"
             }
           }
         },
@@ -313,14 +368,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"causes",
           "description":"'attacker' -'causes'-> 'attack'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["attack"]
+              "enum":["attack"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["attacker"]
+              "enum":["attacker"],
+              "type":"string"
             }
           }
         },
@@ -329,14 +387,17 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"usesMalware",
           "description":"'attacker' -'usesMalware'-> 'malware'",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
               "required":true,
-              "enum":["attacker"]
+              "enum":["attacker"],
+              "type":"string"
             },
             "outVType":{
               "required":true,
-              "enum":["malware"]
+              "enum":["malware"],
+              "type":"string"
             }
           }
         },
@@ -345,12 +406,15 @@
           "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
           "title":"sameAs",
           "description":"indicates that a vertex may be the same as another; should include some confidence score",
+          "multiplicity":"simple",
           "properties":{
             "inVType":{
-              "required":true
+              "required":true,
+              "type":"string"
             },
             "outVType":{
-              "required":true
+              "required":true,
+              "type":"string"
             }
           }
         }
@@ -371,11 +435,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["user"]
+              "enum":["user"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -387,11 +455,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["account"]
+              "enum":["account"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -403,11 +475,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["host"]
+              "enum":["host"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -419,71 +495,105 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["software"]
+              "enum":["software"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             },
             "description":{
               "required":false,
-              "description":"description"
+              "description":"description",
+              "type":"string",
+              "cardinality":"single"
             },
             "nvdId":{
               "required":false,
-              "description":"NVD ID"
+              "description":"NVD ID",
+              "type":"string",
+              "cardinality":"single"
             },
             "status":{
               "required":false,
-              "description":"status"
+              "description":"status",
+              "type":"string",
+              "cardinality":"single"
             },
             "modifiedDate":{
               "required":false,
-              "description":"modified date"
+              "description":"modified date",
+              "type":"long",
+              "cardinality":"single"
             },
             "part":{
               "required":false,
-              "description":"part type"
+              "description":"part type",
+              "type":"string",
+              "cardinality":"single"
             },
             "vendor":{
               "required":false,
-              "description":"vendor"
+              "description":"vendor",
+              "type":"string",
+              "cardinality":"single"
             },
             "product":{
               "required":false,
-              "description":"product name"
+              "description":"product name",
+              "type":"string",
+              "cardinality":"single"
             },
             "version":{
               "required":false,
-              "description":"version"
+              "description":"version",
+              "type":"string",
+              "cardinality":"single"
             },
             "update":{
               "required":false,
-              "description":"update"
+              "description":"update",
+              "type":"string",
+              "cardinality":"single"
             },
             "edition":{
               "required":false,
-              "description":"edition"
+              "description":"edition",
+              "type":"string",
+              "cardinality":"single"
             },
             "language":{
               "required":false,
-              "description":"language"
+              "description":"language",
+              "type":"string",
+              "cardinality":"single"
             },
             "processPath":{
               "required":false,
-              "description":"Process Path"
+              "description":"Process Path",
+              "type":"string",
+              "cardinality":"single"
             },
             "processPid":{
               "required":false,
-              "description":"Process PID"
+              "description":"Process PID",
+              "type":"int",
+              "cardinality":"single"
             },
             "processPpid":{
               "required":false,
-              "description":"Process PPID"
+              "description":"Process PPID",
+              "type":"int",
+              "cardinality":"single"
             },
             "processArgs":{
               "required":false,
-              "description":"Process Args"
+              "description":"Process Args",
+              "type":"string",
+              "cardinality":"single"
             }
           }
         },
@@ -495,87 +605,128 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["vulnerability"]
+              "enum":["vulnerability"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             },
             "comments":{
               "required":false,
-              "description":"comments"
+              "description":"comments",
+              "type":"string",
+              "cardinality":"set"
             },
             "description":{
               "required":false,
-              "description":"description"
+              "description":"description",
+              "type":"string",
+              "cardinality":"single"
             },
             "shortDescription":{
               "required":false,
-              "description":"short description"
+              "description":"short description",
+              "type":"string"
             },
             "solution":{
               "required":false,
-              "description":"solution"
+              "description":"solution",
+              "type":"string",
+              "cardinality":"single"
             },
             "phase":{
               "required":false,
-              "description":"phase"
+              "description":"phase",
+              "type":"string",
+              "cardinality":"single"
             },
             "phaseDate":{
               "required":false,
-              "description":"phase date"
+              "description":"phase date",
+              "type":"long",
+              "cardinality":"single"
             },
             "references":{
               "required":false,
-              "description":"references"
+              "description":"references",
+              "type":"string",
+              "cardinality":"set"
             },
             "status":{
               "required":false,
-              "description":"status"
+              "description":"status",
+              "type":"string",
+              "cardinality":"single"
             },
             "publishedDate":{
               "required":false,
-              "description":"published date"
+              "description":"published date",
+              "type":"long",
+              "cardinality":"single"
             },
             "modifiedDate":{
               "required":false,
-              "description":"modified date"
+              "description":"modified date",
+              "type":"long",
+              "cardinality":"single"
             },
             "cweNumber":{
               "required":false,
-              "description":"CWE Number"
+              "description":"CWE Number",
+              "type":"int",
+              "cardinality":"single"
             },
             "cvssScore":{
               "required":false,
-              "description":"CVSS score"
+              "description":"CVSS score",
+              "type":"decimal",
+              "cardinality":"single"
             },
             "cvssDate":{
               "required":false,
-              "description":"CVSS date"
+              "description":"CVSS date",
+              "type":"long",
+              "cardinality":"single"
             },
             "accessVector":{
               "required":false,
-              "description":"access vector"
+              "description":"access vector",
+              "type":"string",
+              "cardinality":"single"
             },
             "accessComplexity":{
               "required":false,
-              "description":"access complexity"
+              "description":"access complexity",
+              "type":"string",
+              "cardinality":"single"
             },
             "accessAuthentication":{
               "required":false,
-              "description":"access authentication required"
+              "description":"access authentication required",
+              "type":"string",
+              "cardinality":"single"
             },
             "confidentialityImpact":{
               "required":false,
-              "description":"confidentiality impact"
+              "description":"confidentiality impact",
+              "type":"string",
+              "cardinality":"single"
             },
             "integrityImpact":{
               "required":false,
-              "description":"integrity impact"
+              "description":"integrity impact",
+              "type":"string",
+              "cardinality":"single"
             },
             "availabilityImpact":{
               "required":false,
-              "description":"availability impact"
+              "description":"availability impact",
+              "type":"string",
+              "cardinality":"single"
             }
           }
         },
@@ -587,11 +738,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["address"]
+              "enum":["address"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -603,31 +758,45 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["DNSName"]
+              "enum":["DNSName"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             },
             "ns1":{
               "required":false,
-              "description":"name server (1)"
+              "description":"name server (1)",
+              "type":"string",
+              "cardinality":"single"
             },
             "ns2":{
               "required":false,
-              "description":"name server (2)"
+              "description":"name server (2)",
+              "type":"string",
+              "cardinality":"single"
             },
             "ns3":{
               "required":false,
-              "description":"name server (3)"
+              "description":"name server (3)",
+              "type":"string",
+              "cardinality":"single"
             },
             "ns4":{
               "required":false,
-              "description":"name server (4)"
+              "description":"name server (4)",
+              "type":"string",
+              "cardinality":"single"
             },
             "ns5":{
               "required":false,
-              "description":"name server (5)"
+              "description":"name server (5)",
+              "type":"string",
+              "cardinality":"single"
             }
           }
         },
@@ -639,11 +808,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["IP"]
+              "enum":["IP"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -655,11 +828,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["port"]
+              "enum":["port"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -671,51 +848,75 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["addressRange"]
+              "enum":["addressRange"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             },
             "startIP":{
               "required":false,
-              "description":"start IP"
+              "description":"start IP",
+              "type":"string",
+              "cardinality":"single"
             },
             "endIP":{
               "required":false,
-              "description":"end IP"
+              "description":"end IP",
+              "type":"string",
+              "cardinality":"single"
             },
             "startIPInt":{
               "required":false,
-              "description":"start IP, as integer"
+              "description":"start IP, as integer",
+              "type":"int",
+              "cardinality":"single"
             },
             "endIPInt":{
               "required":false,
-              "description":"end IP, as integer"
+              "description":"end IP, as integer",
+              "type":"int",
+              "cardinality":"single"
             },
             "countryCode":{
               "required":false,
-              "description":"Country Code"
+              "description":"Country Code",
+              "type":"string",
+              "cardinality":"single"
             },
             "countryName":{
               "required":false,
-              "description":"Country Name"
+              "description":"Country Name",
+              "type":"string",
+              "cardinality":"single"
             },
             "netname":{
               "required":false,
-              "description":"network name"
+              "description":"network name",
+              "type":"string",
+              "cardinality":"single"
             },
             "description":{
               "required":false,
-              "description":"description"
+              "description":"description",
+              "type":"string",
+              "cardinality":"single"
             },
             "asNum":{
               "required":false,
-              "description":"AS Number"
+              "description":"AS Number",
+              "type":"int",
+              "cardinality":"single"
             },
             "assignedBy":{
               "required":false,
-              "description":"assigned by"
+              "description":"assigned by",
+              "type":"string",
+              "cardinality":"single"
             }
           }
         },
@@ -727,11 +928,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["service"]
+              "enum":["service"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -743,99 +948,147 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["malware"]
+              "enum":["malware"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             },
             "avName":{
               "required":false,
-              "description":"AV vendor's name for this malware"
+              "description":"AV vendor's name for this malware",
+              "type":"string",
+              "cardinality":"single"
             },
             "sha1hashes":{
               "required":false,
-              "description":"known SHA1 hashes for this malware family"
+              "description":"known SHA1 hashes for this malware family",
+              "type":"string",
+              "cardinality":"set"
             },
             "md5hashes":{
               "required":false,
-              "description":"known MD5 hashes for this malware family"
+              "description":"known MD5 hashes for this malware family",
+              "type":"string",
+              "cardinality":"set"
             },
             "platform":{
               "required":false,
-              "description":"platform(s) effected by this malware"
+              "description":"platform(s) effected by this malware",
+              "type":"string",
+              "cardinality":"set"
             },
             "filesCreated":{
               "required":false,
-              "description":"files that may be created by this malware"
+              "description":"files that may be created by this malware",
+              "type":"string",
+              "cardinality":"set"
             },
             "filesModified":{
               "required":false,
-              "description":"files that may be modified by this malware"
+              "description":"files that may be modified by this malware",
+              "type":"string",
+              "cardinality":"set"
             },
             "registryKeysCreated":{
               "required":false,
-              "description":"registry keys that may be created by this malware"
+              "description":"registry keys that may be created by this malware",
+              "type":"string",
+              "cardinality":"set"
             },
             "registryKeysModified":{
               "required":false,
-              "description":"registry keys that may be modified by this malware"
+              "description":"registry keys that may be modified by this malware",
+              "type":"string",
+              "cardinality":"set"
             },
             "malwareType":{
               "required":false,
-              "description":"descriptive malware type(s), eg. 'Trojan' or 'spyware'"
+              "description":"descriptive malware type(s), eg. 'Trojan' or 'spyware'",
+              "type":"string",
+              "cardinality":"set"
             },
             "discoveryDate":{
               "required":false,
-              "description":"date when the first known sample was observed"
+              "description":"date when the first known sample was observed",
+              "type":"long",
+              "cardinality":"single"
             },
             "signatureDate":{
               "required":false,
-              "description":"date when the first known signature was created"
+              "description":"date when the first known signature was created",
+              "type":"long",
+              "cardinality":"single"
             },
             "modifiedDate":{
               "required":false,
-              "description":"date that the most recent source document was last updated"
+              "description":"date that the most recent source document was last updated",
+              "type":"long",
+              "cardinality":"single"
             },
             "overview":{
               "required":false,
-              "description":"descriptive summary of this malware family"
+              "description":"descriptive summary of this malware family",
+              "type":"string",
+              "cardinality":"single"
             },
             "details":{
               "required":false,
-              "description":"additional text description of this malware"
+              "description":"additional text description of this malware",
+              "type":"string",
+              "cardinality":"single"
             },
             "behavior":{
               "required":false,
-              "description":"description of this malware's observed behaviour"
+              "description":"description of this malware's observed behaviour",
+              "type":"string",
+              "cardinality":"single"
             },
             "removal":{
               "required":false,
-              "description":"description of removal procedure"
+              "description":"description of removal procedure",
+              "type":"string",
+              "cardinality":"single"
             },
             "prevalence":{
               "required":false,
-              "description":"prevalence of this malware 'in the wild' (currently a descriptive phrase, may convert these to a numeric range later)"
+              "description":"prevalence of this malware 'in the wild' (currently a descriptive phrase, may convert these to a numeric range later)",
+              "type":"string",
+              "cardinality":"single"
             },
             "distribution":{
               "required":false,
-              "description":"known distribution methods for this malware"
+              "description":"known distribution methods for this malware",
+              "type":"string",
+              "cardinality":"single"
             },
             "aliases":{
               "required":false,
-              "description":"other known names for this malware family (typically from different AV vendors)"
+              "description":"other known names for this malware family (typically from different AV vendors)",
+              "type":"string",
+              "cardinality":"set"
             },
             "knownFileTypes":{
               "required":false,
-              "description":"known file types associated with this file (eg file extensions, mime types, etc.)"
+              "description":"known file types associated with this file (eg file extensions, mime types, etc.)",
+              "type":"string",
+              "cardinality":"set"
             },
             "processesCreated":{
               "required":false,
-              "description":"description of processes created by this malware (eg. executable name with args)"
+              "description":"description of processes created by this malware (eg. executable name with args)",
+              "type":"string",
+              "cardinality":"set"
             },
             "urlsUsed":{
               "required":false,
-              "description":"URLs requested by this malware, or URLs distributing this malware, or othewise associated with this malware."
+              "description":"URLs requested by this malware, or URLs distributing this malware, or othewise associated with this malware.",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -847,63 +1100,93 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["flow"]
+              "enum":["flow"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             },
             "keyStrokeNStroke":{
               "required":false,
-              "description":"detected SSH keystroke count"
+              "description":"detected SSH keystroke count",
+              "type":"int",
+              "cardinality":"single"
             },
             "proto":{
               "required":false,
-              "description":"transaction protocol"
+              "description":"transaction protocol",
+              "type":"string",
+              "cardinality":"single"
             },
             "appBytes":{
               "required":false,
-              "description":"total application bytes"
+              "description":"total application bytes",
+              "type":"int",
+              "cardinality":"single"
             },
             "state":{
               "required":false,
-              "description":"transaction state"
+              "description":"transaction state",
+              "type":"string",
+              "cardinality":"single"
             },
             "startTime":{
               "required":false,
-              "description":"record start time"
+              "description":"record start time",
+              "type":"long",
+              "cardinality":"single"
             },
             "appByteRatio":{
               "required":false,
-              "description":"ratio between source appbytes and dest appbytes"
+              "description":"ratio between source appbytes and dest appbytes",
+              "type":"float",
+              "cardinality":"single"
             },
             "dir":{
               "required":false,
-              "description":"direction of transaction"
+              "description":"direction of transaction",
+              "type":"string",
+              "cardinality":"single"
             },
             "flags":{
               "required":false,
-              "description":"flow state flags seen in transaction"
+              "description":"flow state flags seen in transaction",
+              "type":"string",
+              "cardinality":"single"
             },
             "duration":{
               "required":false,
-              "description":"duration of a flow"
+              "description":"duration of a flow",
+              "type":"int",
+              "cardinality":"single"
             },
             "dstPkts":{
               "required":false,
-              "description":"dst -> src packet count."
+              "description":"dst -> src packet count.",
+              "type":"int",
+              "cardinality":"single"
             },
             "srcPkts":{
               "required":false,
-              "description":"src -> dst packet count."
+              "description":"src -> dst packet count.",
+              "type":"int",
+              "cardinality":"single"
             },
             "totalPkts":{
               "required":false,
-              "description":"total transaction packet count"
+              "description":"total transaction packet count",
+              "type":"int",
+              "cardinality":"single"
             },
             "totalBytes":{
               "required":false,
-              "description":"total transaction bytes"
+              "description":"total transaction bytes",
+              "type":"int",
+              "cardinality":"single"
             }
           }
         },
@@ -915,11 +1198,15 @@
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["attack"]
+              "enum":["attack"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         },
@@ -927,15 +1214,19 @@
           "id": "gov.ornl.sava.stucco/graph/vertices/attacker",
           "extends": "gov.ornl.sava.graphson.normal/graph/vertices/base",
           "title":"attacker",
-          "description":"a known, suspected, or potential attacker",
+          "description":"a known or suspected adversary",
           "properties":{
             "vertexType":{
               "required":true,
-              "enum":["attacker"]
+              "enum":["attacker"],
+              "type":"string",
+              "cardinality":"single"
             },
             "source":{
               "required":false,
-              "description":"Data source for this vertex"
+              "description":"Data source for this vertex",
+              "type":"string",
+              "cardinality":"set"
             }
           }
         }
