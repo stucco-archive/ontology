@@ -50,6 +50,41 @@
               "required":true,
               "enum":["account"],
               "type":"string"
+            },
+            "time":{
+              "required":false,
+              "type":"string"
+            },
+            "status":{
+              "required":false,
+              "type":"string"
+            }
+          }
+        },
+        {
+          "id": "gov.ornl.sava.stucco/graph/edges/logsInFrom",
+          "extends": "gov.ornl.sava.graphson.normal/graph/edges/base",
+          "title":"logsInFrom",
+          "description":"'account' -'logsInFrom'-> 'host'",
+          "multiplicity":"multi",
+          "properties":{
+            "inVType":{
+              "required":true,
+              "enum":["host"],
+              "type":"string"
+            },
+            "outVType":{
+              "required":true,
+              "enum":["account"],
+              "type":"string"
+            },
+            "time":{
+              "required":false,
+              "type":"string"
+            },
+            "status":{
+              "required":false,
+              "type":"string"
             }
           }
         },
@@ -168,7 +203,7 @@
             },
             "outVType":{
               "required":true,
-              "enum":["address"],
+              "enum":["host","address"],
               "type":"string"
             }
           }
