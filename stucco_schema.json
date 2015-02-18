@@ -474,7 +474,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -500,7 +501,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -526,7 +528,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -552,7 +555,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -570,7 +574,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": 3.033507781,
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "text"
             },
             "nvdId":{
               "required":false,
@@ -579,7 +584,8 @@
               "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": 0,
-              "resolutionFunction": "appendList"
+              "resolutionFunction": "appendList",
+              "index": "exact"
             },
             "status":{
               "required":false,
@@ -597,7 +603,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.559187641063191,
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "part":{
               "required":false,
@@ -713,7 +720,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -731,7 +739,8 @@
               "cardinality":"set",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 0.30281106,
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "text"
             },
             "description":{
               "required":false,
@@ -740,7 +749,8 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 3.383410480090717,
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "text"
             },
             "shortDescription":{
               "required":false,
@@ -748,7 +758,8 @@
               "type":"string",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 6.882437470997878,
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "text"
             },
             "solution":{
               "required":false,
@@ -757,7 +768,8 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 6.1163623196299,
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "text"
             },
             "phase":{
               "required":false,
@@ -775,7 +787,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 7.249643,
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "references":{
               "required":false,
@@ -802,7 +815,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.373463923761563,
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "modifiedDate":{
               "required":false,
@@ -811,7 +825,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.559187641063191,
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "cweNumber":{
               "required":false,
@@ -909,7 +924,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -935,7 +951,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1006,7 +1023,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1024,7 +1042,8 @@
               "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "appendList"
+              "resolutionFunction": "appendList",
+              "index": "exact"
             }
           }
         },
@@ -1041,7 +1060,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1067,7 +1087,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1085,7 +1106,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "exact"
             },
             "endIP":{
               "required":true,
@@ -1094,7 +1116,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "exact"
             },
             "startIPInt":{
               "required":true,
@@ -1103,7 +1126,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "exact"
             },
             "endIPInt":{
               "required":true,
@@ -1112,7 +1136,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "exact"
             },
             "countryCode":{
               "required":false,
@@ -1121,7 +1146,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "exact"
             },
             "countryName":{
               "required":false,
@@ -1130,7 +1156,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "exact"
             },
             "netname":{
               "required":false,
@@ -1148,7 +1175,8 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 3.383410480090717,
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "text"
             },
             "asNum":{
               "required":false,
@@ -1183,7 +1211,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1209,7 +1238,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1308,7 +1338,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 3.5570278,
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "signatureDate":{
               "required":false,
@@ -1317,7 +1348,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "modifiedDate":{
               "required":false,
@@ -1326,7 +1358,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.559187641063191,
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "overview":{
               "required":false,
@@ -1335,7 +1368,8 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 5.8790593,
-              "resolutionFunction": "combine"
+              "resolutionFunction": "combine",
+              "index": "text"
             },
             "details":{
               "required":false,
@@ -1344,7 +1378,8 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 5.8044763,
-              "resolutionFunction": "combine"
+              "resolutionFunction": "combine",
+              "index": "text"
             },
             "behavior":{
               "required":false,
@@ -1353,7 +1388,8 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "combine"
+              "resolutionFunction": "combine",
+              "index": "text"
             },
             "removal":{
               "required":false,
@@ -1362,7 +1398,8 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD"
+              "resolutionFunction": "TBD",
+              "index": "text"
             },
             "prevalence":{
               "required":false,
@@ -1433,7 +1470,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1487,7 +1525,8 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.5362262,
-              "resolutionFunction": "keepNew"
+              "resolutionFunction": "keepNew",
+              "index": "mixed"
             },
             "appByteRatio":{
               "required":false,
@@ -1576,7 +1615,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
@@ -1602,7 +1642,8 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none"
+              "resolutionFunction": "none",
+              "index": "exact"
             },
             "source":{
               "required":false,
