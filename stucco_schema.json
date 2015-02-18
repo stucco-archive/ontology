@@ -184,8 +184,7 @@
             "reverse":{
               "required":false,
               "type": "boolean",
-              "description":"flag for reverse lookups.  Assume False by default.",
-              "type":"boolean"
+              "description":"flag for reverse lookups.  Assume False by default."
             }
           }
         },
@@ -472,13 +471,19 @@
               "required":true,
               "enum":["user"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -492,13 +497,19 @@
               "required":true,
               "enum":["account"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -512,13 +523,19 @@
               "required":true,
               "enum":["host"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -532,103 +549,154 @@
               "required":true,
               "enum":["software"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             },
             "description":{
               "required":false,
               "description":"description",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": 3.033507781,
+              "resolutionFunction": "TBD"
             },
             "nvdId":{
               "required":false,
               "description":"NVD ID",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             },
             "status":{
               "required":false,
               "description":"status",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "keepNew"
             },
             "modifiedDate":{
               "required":false,
               "description":"modified date",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 1.559187641063191,
+              "resolutionFunction": "keepNew"
             },
             "part":{
               "required":false,
               "description":"part type",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.4717679,
+              "resolutionFunction": "appendList"
             },
             "vendor":{
               "required":false,
               "description":"vendor",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 6.062343,
+              "resolutionFunction": "appendList"
             },
             "product":{
               "required":false,
               "description":"product name",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 7.6517224,
+              "resolutionFunction": "appendList"
             },
             "version":{
               "required":false,
               "description":"version",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 8.713991,
+              "resolutionFunction": "appendList"
             },
             "update":{
               "required":false,
               "description":"update",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 1.1007229,
+              "resolutionFunction": "keepNew"
             },
             "edition":{
               "required":false,
               "description":"edition",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.540115,
+              "resolutionFunction": "appendList"
             },
             "language":{
               "required":false,
               "description":"language",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.008644951,
+              "resolutionFunction": "appendList"
             },
             "processPath":{
               "required":false,
               "description":"Process Path",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.45797676,
+              "resolutionFunction": "appendList"
             },
             "processPid":{
               "required":false,
               "description":"Process PID",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.5673976,
+              "resolutionFunction": "appendList"
             },
             "processPpid":{
               "required":false,
               "description":"Process PPID",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.5673976,
+              "resolutionFunction": "appendList"
             },
             "processArgs":{
               "required":false,
               "description":"Process Args",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.43408045,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -642,126 +710,189 @@
               "required":true,
               "enum":["vulnerability"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             },
             "comments":{
               "required":false,
               "description":"comments",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 0.30281106,
+              "resolutionFunction": "TBD"
             },
             "description":{
               "required":false,
               "description":"description",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 3.383410480090717,
+              "resolutionFunction": "TBD"
             },
             "shortDescription":{
               "required":false,
               "description":"short description",
-              "type":"string"
+              "type":"string",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 6.882437470997878,
+              "resolutionFunction": "TBD"
             },
             "solution":{
               "required":false,
               "description":"solution",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 6.1163623196299,
+              "resolutionFunction": "TBD"
             },
             "phase":{
               "required":false,
               "description":"phase",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.3578151,
+              "resolutionFunction": "keepNew"
             },
             "phaseDate":{
               "required":false,
               "description":"phase date",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 7.249643,
+              "resolutionFunction": "keepNew"
             },
             "references":{
               "required":false,
               "description":"references",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "compareReferences",
+              "comparisonWeight": 2.212283815035590,
+              "resolutionFunction": "appendList"
             },
             "status":{
               "required":false,
               "description":"status",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.17141086,
+              "resolutionFunction": "keepNew"
             },
             "publishedDate":{
               "required":false,
               "description":"published date",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 1.373463923761563,
+              "resolutionFunction": "keepNew"
             },
             "modifiedDate":{
               "required":false,
               "description":"modified date",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 1.559187641063191,
+              "resolutionFunction": "keepNew"
             },
             "cweNumber":{
               "required":false,
               "description":"CWE Number",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.1650552902059562,
+              "resolutionFunction": "appendList"
             },
             "cvssScore":{
               "required":false,
               "description":"CVSS score",
               "type":"decimal",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.7038249561307638,
+              "resolutionFunction": "keepConfidence"
             },
             "cvssDate":{
               "required":false,
               "description":"CVSS date",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 1.020710889265377,
+              "resolutionFunction": "keepNew"
             },
             "accessVector":{
               "required":false,
               "description":"access vector",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.4045041254793607,
+              "resolutionFunction": "appendList"
             },
             "accessComplexity":{
               "required":false,
               "description":"access complexity",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.3687215225000001,
+              "resolutionFunction": "appendList"
             },
             "accessAuthentication":{
               "required":false,
               "description":"access authentication required",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.2903260237989832,
+              "resolutionFunction": "keepNew"
             },
             "confidentialityImpact":{
               "required":false,
               "description":"confidentiality impact",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.4752527012618734,
+              "resolutionFunction": "appendList"
             },
             "integrityImpact":{
               "required":false,
               "description":"integrity impact",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.4755113952459684,
+              "resolutionFunction": "appendList"
             },
             "availabilityImpact":{
               "required":false,
               "description":"availability impact",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.4761615044335661,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -775,13 +906,19 @@
               "required":true,
               "enum":["address"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -795,43 +932,64 @@
               "required":true,
               "enum":["DNSName"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             },
             "ns1":{
               "required":false,
               "description":"name server (1)",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "ns2":{
               "required":false,
               "description":"name server (2)",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "ns3":{
               "required":false,
               "description":"name server (3)",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "ns4":{
               "required":false,
               "description":"name server (4)",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "ns5":{
               "required":false,
               "description":"name server (5)",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -845,13 +1003,28 @@
               "required":true,
               "enum":["IP"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
+            },
+            "ipInt":{
+              "required":true,
+              "description":"start IP, as integer",
+              "type":"int",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -865,13 +1038,19 @@
               "required":true,
               "enum":["port"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -885,73 +1064,109 @@
               "required":true,
               "enum":["addressRange"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             },
             "startIP":{
-              "required":false,
+              "required":true,
               "description":"start IP",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "endIP":{
-              "required":false,
+              "required":true,
               "description":"end IP",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "startIPInt":{
-              "required":false,
+              "required":true,
               "description":"start IP, as integer",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "endIPInt":{
-              "required":false,
+              "required":true,
               "description":"end IP, as integer",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "countryCode":{
               "required":false,
               "description":"Country Code",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "countryName":{
               "required":false,
               "description":"Country Name",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "netname":{
               "required":false,
               "description":"network name",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "description":{
               "required":false,
               "description":"description",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 3.383410480090717,
+              "resolutionFunction": "TBD"
             },
             "asNum":{
               "required":false,
               "description":"AS Number",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "assignedBy":{
               "required":false,
               "description":"assigned by",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             }
           }
         },
@@ -965,13 +1180,19 @@
               "required":true,
               "enum":["service"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -985,145 +1206,217 @@
               "required":true,
               "enum":["malware"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             },
             "avName":{
               "required":false,
               "description":"AV vendor's name for this malware",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "SmithWaterman",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "sha1hashes":{
               "required":false,
               "description":"known SHA1 hashes for this malware family",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "md5hashes":{
               "required":false,
               "description":"known MD5 hashes for this malware family",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "platform":{
               "required":false,
               "description":"platform(s) effected by this malware",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "filesCreated":{
               "required":false,
               "description":"files that may be created by this malware",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "filesModified":{
               "required":false,
               "description":"files that may be modified by this malware",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "registryKeysCreated":{
               "required":false,
               "description":"registry keys that may be created by this malware",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "registryKeysModified":{
               "required":false,
               "description":"registry keys that may be modified by this malware",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "malwareType":{
               "required":false,
               "description":"descriptive malware type(s), eg. 'Trojan' or 'spyware'",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 1.4822443,
+              "resolutionFunction": "appendList"
             },
             "discoveryDate":{
               "required":false,
               "description":"date when the first known sample was observed",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 3.5570278,
+              "resolutionFunction": "keepNew"
             },
             "signatureDate":{
               "required":false,
               "description":"date when the first known signature was created",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepNew"
             },
             "modifiedDate":{
               "required":false,
               "description":"date that the most recent source document was last updated",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 1.559187641063191,
+              "resolutionFunction": "keepNew"
             },
             "overview":{
               "required":false,
               "description":"descriptive summary of this malware family",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 5.8790593,
+              "resolutionFunction": "combine"
             },
             "details":{
               "required":false,
               "description":"additional text description of this malware",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 5.8044763,
+              "resolutionFunction": "combine"
             },
             "behavior":{
               "required":false,
               "description":"description of this malware's observed behaviour",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "combine"
             },
             "removal":{
               "required":false,
               "description":"description of removal procedure",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "prevalence":{
               "required":false,
               "description":"prevalence of this malware 'in the wild' (currently a descriptive phrase, may convert these to a numeric range later)",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "distribution":{
               "required":false,
               "description":"known distribution methods for this malware",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "aliases":{
               "required":false,
               "description":"other known names for this malware family (typically from different AV vendors)",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "knownFileTypes":{
               "required":false,
               "description":"known file types associated with this file (eg file extensions, mime types, etc.)",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "processesCreated":{
               "required":false,
               "description":"description of processes created by this malware (eg. executable name with args)",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "urlsUsed":{
               "required":false,
               "description":"URLs requested by this malware, or URLs distributing this malware, or othewise associated with this malware.",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -1137,91 +1430,136 @@
               "required":true,
               "enum":["flow"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             },
             "keyStrokeNStroke":{
               "required":false,
               "description":"detected SSH keystroke count",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "proto":{
               "required":false,
               "description":"transaction protocol",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "appBytes":{
               "required":false,
               "description":"total application bytes",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepConfidence"
             },
             "state":{
               "required":false,
               "description":"transaction state",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepNew"
             },
             "startTime":{
               "required":false,
               "description":"record start time",
               "type":"long",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "compareTimestamps",
+              "comparisonWeight": 1.5362262,
+              "resolutionFunction": "keepNew"
             },
             "appByteRatio":{
               "required":false,
               "description":"ratio between source appbytes and dest appbytes",
               "type":"float",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepConfidence"
             },
             "dir":{
               "required":false,
               "description":"direction of transaction",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "flags":{
               "required":false,
               "description":"flow state flags seen in transaction",
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "duration":{
               "required":false,
               "description":"duration of a flow",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepConfidence"
             },
             "dstPkts":{
               "required":false,
               "description":"dst -> src packet count.",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             },
             "srcPkts":{
               "required":false,
               "description":"src -> dst packet count.",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "appendList"
             },
             "totalPkts":{
               "required":false,
               "description":"total transaction packet count",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.74484295,
+              "resolutionFunction": "keepConfidence"
             },
             "totalBytes":{
               "required":false,
               "description":"total transaction bytes",
               "type":"int",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0.76540166,
+              "resolutionFunction": "keepConfidence"
             }
           }
         },
@@ -1235,13 +1573,19 @@
               "required":true,
               "enum":["attack"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         },
@@ -1255,13 +1599,19 @@
               "required":true,
               "enum":["attacker"],
               "type":"string",
-              "cardinality":"single"
+              "cardinality":"single",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set"
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
             }
           }
         }
