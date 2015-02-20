@@ -474,8 +474,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -486,6 +485,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -501,8 +514,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -513,6 +525,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -528,8 +554,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -540,6 +565,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -555,8 +594,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -574,8 +612,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": 3.033507781,
-              "resolutionFunction": "TBD",
-              "index": "text"
+              "resolutionFunction": "TBD"
             },
             "nvdId":{
               "required":false,
@@ -584,8 +621,7 @@
               "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": 0,
-              "resolutionFunction": "appendList",
-              "index": "exact"
+              "resolutionFunction": "appendList"
             },
             "status":{
               "required":false,
@@ -603,8 +639,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.559187641063191,
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "part":{
               "required":false,
@@ -705,6 +740,33 @@
               "comparisonWeight": 0.43408045,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              },
+              {
+                "keys":["nvdId"]
+              }
+            ],
+            "mixed":[
+              {
+                "keys":["modifiedDate"]
+              }
+            ],
+            "text":[
+              {
+                "keys":["description"]
+              }
+            ]
           }
         },
         {
@@ -720,8 +782,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -739,8 +800,7 @@
               "cardinality":"set",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 0.30281106,
-              "resolutionFunction": "TBD",
-              "index": "text"
+              "resolutionFunction": "TBD"
             },
             "description":{
               "required":false,
@@ -749,8 +809,7 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 3.383410480090717,
-              "resolutionFunction": "TBD",
-              "index": "text"
+              "resolutionFunction": "TBD"
             },
             "shortDescription":{
               "required":false,
@@ -758,8 +817,7 @@
               "type":"string",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 6.882437470997878,
-              "resolutionFunction": "TBD",
-              "index": "text"
+              "resolutionFunction": "TBD"
             },
             "solution":{
               "required":false,
@@ -768,8 +826,7 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 6.1163623196299,
-              "resolutionFunction": "TBD",
-              "index": "text"
+              "resolutionFunction": "TBD"
             },
             "phase":{
               "required":false,
@@ -787,8 +844,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 7.249643,
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "references":{
               "required":false,
@@ -815,8 +871,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.373463923761563,
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "modifiedDate":{
               "required":false,
@@ -825,8 +880,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.559187641063191,
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "cweNumber":{
               "required":false,
@@ -909,6 +963,45 @@
               "comparisonWeight": 0.4761615044335661,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ],
+            "mixed":[
+              {
+                "keys":["modifiedDate"]
+              },
+              {
+                "keys":["phaseDate"]
+              },
+              {
+                "keys":["publishedDate"]
+              }
+            ],
+            "text":[
+              {
+                "keys":["description"]
+              },
+              {
+                "keys":["comments"]
+              },
+              {
+                "keys":["shortDescription"]
+              },
+              {
+                "keys":["solution"]
+              }
+            ]
           }
         },
         {
@@ -924,8 +1017,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -936,6 +1028,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -951,8 +1057,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1008,6 +1113,20 @@
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -1023,8 +1142,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1042,9 +1160,27 @@
               "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "appendList",
-              "index": "exact"
+              "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ],
+            "mixed":[
+              {
+                "keys":["ipInt"]
+              }
+            ]
           }
         },
         {
@@ -1060,8 +1196,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1072,6 +1207,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -1087,8 +1236,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1106,8 +1254,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD",
-              "index": "exact"
+              "resolutionFunction": "TBD"
             },
             "endIP":{
               "required":true,
@@ -1116,8 +1263,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD",
-              "index": "exact"
+              "resolutionFunction": "TBD"
             },
             "startIPInt":{
               "required":true,
@@ -1126,8 +1272,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD",
-              "index": "exact"
+              "resolutionFunction": "TBD"
             },
             "endIPInt":{
               "required":true,
@@ -1136,8 +1281,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD",
-              "index": "exact"
+              "resolutionFunction": "TBD"
             },
             "countryCode":{
               "required":false,
@@ -1146,8 +1290,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD",
-              "index": "exact"
+              "resolutionFunction": "TBD"
             },
             "countryName":{
               "required":false,
@@ -1156,8 +1299,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD",
-              "index": "exact"
+              "resolutionFunction": "TBD"
             },
             "netname":{
               "required":false,
@@ -1175,8 +1317,7 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 3.383410480090717,
-              "resolutionFunction": "TBD",
-              "index": "text"
+              "resolutionFunction": "TBD"
             },
             "asNum":{
               "required":false,
@@ -1196,6 +1337,45 @@
               "comparisonWeight": "TBD",
               "resolutionFunction": "TBD"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              },
+              {
+                "keys":["countryCode"]
+              },
+              {
+                "keys":["countryName"]
+              }
+            ],
+            "mixed":[
+              {
+                "keys":["startIP"]
+              },
+              {
+                "keys":["startIPInt"]
+              },
+              {
+                "keys":["endIP"]
+              },
+              {
+                "keys":["endIPInt"]
+              }
+            ],
+            "text":[
+              {
+                "keys":["description"]
+              }
+            ]
           }
         },
         {
@@ -1211,8 +1391,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1223,6 +1402,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -1238,8 +1431,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1338,8 +1530,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 3.5570278,
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "signatureDate":{
               "required":false,
@@ -1348,8 +1539,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "modifiedDate":{
               "required":false,
@@ -1358,8 +1548,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.559187641063191,
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "overview":{
               "required":false,
@@ -1368,8 +1557,7 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 5.8790593,
-              "resolutionFunction": "combine",
-              "index": "text"
+              "resolutionFunction": "combine"
             },
             "details":{
               "required":false,
@@ -1378,8 +1566,7 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 5.8044763,
-              "resolutionFunction": "combine",
-              "index": "text"
+              "resolutionFunction": "combine"
             },
             "behavior":{
               "required":false,
@@ -1388,8 +1575,7 @@
               "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "combine",
-              "index": "text"
+              "resolutionFunction": "combine"
             },
             "removal":{
               "required":false,
@@ -1398,8 +1584,7 @@
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
-              "resolutionFunction": "TBD",
-              "index": "text"
+              "resolutionFunction": "TBD"
             },
             "prevalence":{
               "required":false,
@@ -1455,6 +1640,45 @@
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ],
+            "mixed":[
+              {
+                "keys":["discoveryDate"]
+              },
+              {
+                "keys":["modifiedDate"]
+              },
+              {
+                "keys":["signatureDate"]
+              }
+            ],
+            "text":[
+              {
+                "keys":["details"]
+              },
+              {
+                "keys":["removal"]
+              },
+              {
+                "keys":["behavior"]
+              },
+              {
+                "keys":["overview"]
+              }
+            ]
           }
         },
         {
@@ -1470,8 +1694,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1525,8 +1748,7 @@
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.5362262,
-              "resolutionFunction": "keepNew",
-              "index": "mixed"
+              "resolutionFunction": "keepNew"
             },
             "appByteRatio":{
               "required":false,
@@ -1600,6 +1822,25 @@
               "comparisonWeight": 0.76540166,
               "resolutionFunction": "keepConfidence"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ],
+            "mixed":[
+              {
+                "keys":["startTime"]
+              }
+            ]
           }
         },
         {
@@ -1615,8 +1856,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1627,6 +1867,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         },
         {
@@ -1642,8 +1896,7 @@
               "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
-              "resolutionFunction": "none",
-              "index": "exact"
+              "resolutionFunction": "none"
             },
             "source":{
               "required":false,
@@ -1654,6 +1907,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             }
+          },
+          "indexes":{
+            "composite":[
+              {
+                "keys":["name"],
+                "unique": true
+              },
+              {
+                "keys":["vertexType"]
+              },
+              {
+                "keys":["source"]
+              }
+            ]
           }
         }
       ]
