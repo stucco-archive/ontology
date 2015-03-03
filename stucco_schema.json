@@ -1241,7 +1241,7 @@
               "comparisonWeight": 1.559187641063191,
               "resolutionFunction": "keepNew"
             },
-            "overview":{
+            "description":{
               "description":"descriptive summary of this malware family",
               "type":"string",
               "cardinality":"single",
