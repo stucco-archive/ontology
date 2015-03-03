@@ -1,0 +1,23 @@
+{
+	"mode": "NORMAL",
+	"vertices": [
+		{
+			"vertexType": "malware",
+			"platform": "Windows",
+			"_type": "vertex",
+			"malwareType": ["Trojan"],
+			"signatureDate": 1284593193000,
+			"source": "Sophos",
+			"_id": "Troj/FBJack-A",
+			"prevalence": "Small Number of Reports",
+			"name": "Troj/FBJack-A",
+			"knownFileTypes": ["application/octet-stream","text/html"],
+			"discoveryDate": 1284593193000,
+			"modifiedDate": 1284624938000
+		}
+	],
+	"edges": [
+		
+	]
+
+}

@@ -1,0 +1,33 @@
+{
+  "mode": "NORMAL",
+  "vertices": [
+    {
+      "_id": "stucco1",
+      "name": "stucco1",
+      "_type": "vertex",
+      "source": "PackageList",
+      "vertexType": "host"
+    },
+    {
+      "_id": "ftp_0.17-25",
+      "name": "ftp_0.17-25",
+      "_type": "vertex",
+      "source": "PackageList",
+      "vertexType": "software",
+      "product": "ftp",
+      "version": "0.17-25"
+    }
+  ],
+  "edges": [
+    {
+      "_id": "stucco1_runs_ftp_0.17-25",
+      "_outV": "stucco1",
+      "_inV": "ftp_0.17-25",
+      "_type": "edge",
+      "_label": "runs",
+      "source": "PackageList",
+      "outVType": "host",
+      "inVType": "software"
+    }
+  ]
+}
