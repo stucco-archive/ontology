@@ -84,6 +84,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -93,7 +100,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -134,6 +141,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -143,7 +157,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -184,6 +198,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -193,7 +214,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -363,7 +384,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -589,7 +610,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -655,6 +676,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -664,7 +692,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -699,6 +727,13 @@
               "resolutionFunction": "none"
             },
             "name":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
+            "description":{
               "type":"string",
               "cardinality":"single",
               "comparisonFunction": "exact",
@@ -754,7 +789,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -795,6 +830,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -812,7 +854,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name", "ipInt"],
+          "required": ["vertexType", "name", "description", "ipInt"],
           "indexes":{
             "composite":[
               {
@@ -858,6 +900,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -867,7 +916,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -997,7 +1046,7 @@
               "resolutionFunction": "TBD"
             }
           },
-          "required": ["vertexType", "name", "startIP", "endIP", "startIPInt", "endIPInt"],
+          "required": ["vertexType", "name", "description", "startIP", "endIP", "startIPInt", "endIPInt"],
           "indexes":{
             "composite":[
               {
@@ -1063,6 +1112,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -1072,7 +1128,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -1334,7 +1390,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -1394,6 +1450,13 @@
               "resolutionFunction": "none"
             },
             "name":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
+            "description":{
               "type":"string",
               "cardinality":"single",
               "comparisonFunction": "exact",
@@ -1513,7 +1576,7 @@
               "resolutionFunction": "keepConfidence"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -1559,6 +1622,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -1568,7 +1638,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
@@ -1609,6 +1679,13 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "description":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
@@ -1618,7 +1695,7 @@
               "resolutionFunction": "appendList"
             }
           },
-          "required": ["vertexType", "name"],
+          "required": ["vertexType", "name", "description"],
           "indexes":{
             "composite":[
               {
