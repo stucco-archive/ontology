@@ -25,6 +25,10 @@
           "type":"string",
           "id": "gov.ornl.sava.graphson.normal/graph/edges/base/_type"
         },
+        "description": {
+          "type":"string",
+          "id": "gov.ornl.sava.graphson.normal/graph/edges/base/description"
+        },
         "score":{
           "id": "gov.ornl.sava.graphson.normal/graph/edges/base/score",
           "description":"the calculated confidence score of this edge",
@@ -33,7 +37,7 @@
           "maximum": 1.0
         }
       },
-      "required": ["_id", "_inV", "_outV", "_label", "_type"]
+      "required": ["_id", "_inV", "_outV", "_label", "_type", "description"]
     },
     "vertex":{
       "type":"object",
