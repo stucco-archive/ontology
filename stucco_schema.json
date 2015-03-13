@@ -5,6 +5,10 @@
     "edge":{
       "type":"object",
       "properties":{
+        "edgeName": {
+          "type":"string",
+          "id": "gov.ornl.sava.graphson.normal/graph/edges/base/edgeName"
+        },
         "_id": {
           "type":"string",
           "id": "gov.ornl.sava.graphson.normal/graph/edges/base/_id"
@@ -98,7 +102,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -155,7 +159,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -212,7 +216,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -262,7 +266,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -445,7 +449,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -456,7 +460,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "WHIRL",
               "comparisonWeight": 0.30281106,
               "resolutionFunction": "TBD"
@@ -506,7 +510,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "compareReferences",
               "comparisonWeight": 2.212283815035590,
               "resolutionFunction": "appendList"
@@ -537,7 +541,7 @@
             },
             "cweNumber":{
               "description":"CWE Number",
-              "type":"integer",
+              "type":"string",
               "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": 0.1650552902059562,
@@ -553,7 +557,7 @@
             },
             "cvssDate":{
               "description":"CVSS date",
-              "type":"number",
+              "type":"string",
               "cardinality":"single",
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.020710889265377,
@@ -690,7 +694,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -747,7 +751,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -844,7 +848,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -914,7 +918,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -964,7 +968,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -1035,7 +1039,7 @@
             },
             "asNum":{
               "description":"AS Number",
-              "type":"integer",
+              "type":"string",
               "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
@@ -1126,7 +1130,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -1176,7 +1180,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -1195,7 +1199,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1206,7 +1210,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1217,7 +1221,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1228,7 +1232,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1239,7 +1243,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1250,7 +1254,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1261,7 +1265,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1272,7 +1276,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": 1.4822443,
               "resolutionFunction": "appendList"
@@ -1333,6 +1337,14 @@
               "comparisonWeight": "TBD",
               "resolutionFunction": "TBD"
             },
+             "overview":{
+              "description":"overview of this malware family",
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "WHIRL",
+              "comparisonWeight": 5.8790593,
+              "resolutionFunction": "combine"
+            },
             "prevalence":{
               "description":"prevalence of this malware 'in the wild' (currently a descriptive phrase, may convert these to a numeric range later)",
               "type":"string",
@@ -1355,7 +1367,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1366,7 +1378,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1377,7 +1389,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1388,7 +1400,7 @@
                   { "type": "string" },
                   { "type": "array" }
                 ],
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "TBD",
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
@@ -1470,7 +1482,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -1636,7 +1648,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -1693,7 +1705,7 @@
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
-              "cardinality":"set",
+              "cardinality":"single",
               "comparisonFunction": "none",
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
@@ -1756,7 +1768,7 @@
               "enum":["account"],
               "type":"string"
             },
-            "time":{
+            "timeStamp":{
               "type":"string"
             },
             "status":{
@@ -1784,7 +1796,7 @@
               "enum":["account"],
               "type":"string"
             },
-            "time":{
+            "timeStamp":{
               "type":"string"
             },
             "status":{
@@ -1913,7 +1925,7 @@
       "objName": "gov.ornl.sava.stucco/graph/edges/hasIP",
       "title":"hasIP",
       "description":"'address' -'hasIP'-> 'IP'",
-      "multiplicity":"simple",
+      "multiplicity":"multi",
       "allOf": [
         { "$ref": "#/definitions/edge" },
         {
@@ -1935,7 +1947,7 @@
       "objName": "gov.ornl.sava.stucco/graph/edges/hasPort",
       "title":"hasPort",
       "description":"'address' -'hasPort'-> 'port'",
-      "multiplicity":"simple",
+      "multiplicity":"multi",
       "allOf": [
         { "$ref": "#/definitions/edge" },
         {
@@ -2001,7 +2013,7 @@
       "objName": "gov.ornl.sava.stucco/graph/edges/dstAddress",
       "title":"dstAddress",
       "description":"'flow' -'dstAddress'-> 'address'",
-      "multiplicity":"simple",
+      "multiplicity":"multi",
       "allOf": [
         { "$ref": "#/definitions/edge" },
         {
@@ -2023,7 +2035,7 @@
       "objName": "gov.ornl.sava.stucco/graph/edges/srcAddress",
       "title":"srcAddress",
       "description":"'flow' -'srcAddress'-> 'address'",
-      "multiplicity":"simple",
+      "multiplicity":"multi",
       "allOf": [
         { "$ref": "#/definitions/edge" },
         {
@@ -2045,7 +2057,7 @@
       "objName": "gov.ornl.sava.stucco/graph/edges/hasFlow",
       "title":"hasFlow",
       "description":"'software' -'hasFlow'-> 'flow'",
-      "multiplicity":"simple",
+      "multiplicity":"multi",
       "allOf": [
         { "$ref": "#/definitions/edge" },
         {
