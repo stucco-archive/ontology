@@ -5,6 +5,10 @@
     "edge":{
       "type":"object",
       "properties":{
+        "edgeName": {
+          "type":"string",
+          "id": "gov.ornl.sava.graphson.normal/graph/edges/base/edgeName"
+        },
         "_id": {
           "type":"string",
           "id": "gov.ornl.sava.graphson.normal/graph/edges/base/_id"
@@ -537,7 +541,7 @@
             },
             "cweNumber":{
               "description":"CWE Number",
-              "type":"integer",
+              "type":"string",
               "cardinality":"single",
               "comparisonFunction": "exact",
               "comparisonWeight": 0.1650552902059562,
@@ -1430,7 +1434,7 @@
                 "keys":["behavior"]
               },
               {
-                "keys":["overview"]
+                "keys":["description"]
               }
             ]
           }
@@ -1756,7 +1760,7 @@
               "enum":["account"],
               "type":"string"
             },
-            "time":{
+            "timeStamp":{
               "type":"string"
             },
             "status":{
@@ -1784,7 +1788,7 @@
               "enum":["account"],
               "type":"string"
             },
-            "time":{
+            "timeStamp":{
               "type":"string"
             },
             "status":{
