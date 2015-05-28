@@ -1582,6 +1582,14 @@
               "comparisonFunction": "exact",
               "comparisonWeight": 0.76540166,
               "resolutionFunction": "keepConfidence"
+            },
+            "SITUScore":{
+              "description":"Anomaly score given by SITU",
+              "type":"number",
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
             }
           },
           "required": ["vertexType", "name", "description"],
