@@ -1615,8 +1615,16 @@
               "comparisonWeight": 0.76540166,
               "resolutionFunction": "keepConfidence"
             },
-            "situScore":{
+            "situAnomalyScore":{
               "description":"Anomaly score given by situ",
+              "type":"number",
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
+            },
+            "situMaliciousnessScore":{
+              "description":"Maliciousness score given by situ",
               "type":"number",
               "cardinality":"single",
               "comparisonFunction": "TBD",
