@@ -853,6 +853,14 @@
               "comparisonWeight": 0,
               "resolutionFunction": "appendList"
             },
+            "tags":{
+              "description":"Descriptive tags for this IP",
+              "type":"string",
+              "cardinality":"set",
+              "comparisonFunction": "none",
+              "comparisonWeight": 0,
+              "resolutionFunction": "appendList"
+            },
             "ipInt":{
               "description":"start IP, as integer",
               "type":"integer",
