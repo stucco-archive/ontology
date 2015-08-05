@@ -1503,6 +1503,22 @@
               "comparisonWeight": "TBD",
               "resolutionFunction": "keepConfidence"
             },
+            "srcAppBytes":{
+              "description":"src application bytes",
+              "type":"integer",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepConfidence"
+            },
+            "dstAppBytes":{
+              "description":"dst application bytes",
+              "type":"integer",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepConfidence"
+            },
             "state":{
               "description":"transaction state",
               "type":"string",
@@ -1518,6 +1534,14 @@
               "comparisonFunction": "compareTimestamps",
               "comparisonWeight": 1.5362262,
               "resolutionFunction": "keepNew"
+            },
+            "duration":{
+              "description":"flow duration",
+              "type":"number",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "keepConfidence"
             },
             "appByteRatio":{
               "description":"ratio between source appbytes and dest appbytes",
@@ -1583,8 +1607,16 @@
               "comparisonWeight": 0.76540166,
               "resolutionFunction": "keepConfidence"
             },
-            "SITUScore":{
-              "description":"Anomaly score given by SITU",
+            "situScore":{
+              "description":"Anomaly score given by situ",
+              "type":"number",
+              "cardinality":"single",
+              "comparisonFunction": "TBD",
+              "comparisonWeight": "TBD",
+              "resolutionFunction": "TBD"
+            },
+            "site":{
+              "description":"location where this flow was collected",
               "type":"number",
               "cardinality":"single",
               "comparisonFunction": "TBD",
