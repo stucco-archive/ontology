@@ -1983,7 +1983,7 @@
               "type":"string"
             },
             "outVType":{
-              "enum":["host","address"],
+              "enum":["host","address","DNSName"],
               "type":"string"
             }
           },
