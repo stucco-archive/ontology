@@ -2049,7 +2049,7 @@
               "type":"string"
             },
             "outVType":{
-              "enum":["port"],
+              "enum":["address","port"],
               "type":"string"
             }
           },
