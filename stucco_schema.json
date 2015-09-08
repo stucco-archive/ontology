@@ -1135,6 +1135,20 @@
               "comparisonWeight": 0,
               "resolutionFunction": "none"
             },
+            "reference":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
+            "notes":{
+              "type":"string",
+              "cardinality":"single",
+              "comparisonFunction": "exact",
+              "comparisonWeight": 0,
+              "resolutionFunction": "none"
+            },
             "source":{
               "description":"Data source for this vertex",
               "type":"string",
