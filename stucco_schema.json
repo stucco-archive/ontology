@@ -1589,14 +1589,6 @@
               "comparisonWeight": "TBD",
               "resolutionFunction": "appendList"
             },
-            "duration":{
-              "description":"duration of a flow",
-              "type":"integer",
-              "cardinality":"single",
-              "comparisonFunction": "exact",
-              "comparisonWeight": "TBD",
-              "resolutionFunction": "keepConfidence"
-            },
             "dstPkts":{
               "description":"dst -> src packet count.",
               "type":"integer",
